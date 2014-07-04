@@ -20,22 +20,22 @@ time_stamp = time.time()
 
 # Define the callback functions (notes)    
 def note_a(channel): 
-	os.system('mpg321 note_a.mp3 &')
+	os.system('mpg321 note_a.mp3')
 	print "Note A playing"
 def note_b(channel):
-	os.system('mpg321 note_b.mp3 &')  
+	os.system('mpg321 note_b.mp3')  
 	print "Note B playing"
 def note_c(channel):  
-	os.system('mpg321 note_c.mp3 &') 
+	os.system('mpg321 note_c.mp3') 
 	print "Note C playing"
 def note_d(channel):  
-	os.system('mpg321 note_d.mp3 &') 
+	os.system('mpg321 note_d.mp3') 
 	print "Note D playing"
 def note_e(channel):  
-	os.system('mpg321 note_e.mp3 &') 
+	os.system('mpg321 note_e.mp3') 
 	print "Note E playing"
 def note_f(channel):  
-	os.system('mpg321 note_f.mp3 &') 
+	os.system('mpg321 note_f.mp3') 
 	print "Note F playing"
 
 raw_input("Press Enter to start\n>")  

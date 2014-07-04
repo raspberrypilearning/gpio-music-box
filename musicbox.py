@@ -3,6 +3,8 @@
 import RPi.GPIO as GPIO 
 import time 
 import os
+import pygame.mixer
+
 GPIO.setmode(GPIO.BCM)  
   
 # 25 to stop the script  
@@ -18,24 +20,41 @@ GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 time_stamp = time.time()  
 
+
+soundA = pygame.mixer.Sound("note_a.wav") 
+soundB = pygame.mixer.Sound("note_b.wav")
+soundC = pygame.mixer.Sound("note_c.wav")
+soundD = pygame.mixer.Sound("note_d.wav") 
+soundE = pygame.mixer.Sound("note_e.wav")
+soundF = pygame.mixer.Sound("note_f.wav")
+
+soundChannelA = pygame.mixer.Channel(1) 
+soundChannelB = pygame.mixer.Channel(2)
+soundChannelC = pygame.mixer.Channel(3)
+soundChannelD = pygame.mixer.Channel(4) 
+soundChannelE = pygame.mixer.Channel(5)
+soundChannelF = pygame.mixer.Channel(6)
+
+
+
 # Define the callback functions (notes)    
 def note_a(channel): 
-	os.system('mpg321 note_a.mp3')
+	soundChannelA.play(soundA)
 	print "Note A playing"
 def note_b(channel):
-	os.system('mpg321 note_b.mp3')  
+	soundChannelB.play(soundB)  
 	print "Note B playing"
 def note_c(channel):  
-	os.system('mpg321 note_c.mp3') 
+	soundChannelC.play(soundC)
 	print "Note C playing"
 def note_d(channel):  
-	os.system('mpg321 note_d.mp3') 
+	soundChannelD.play(soundD) 
 	print "Note D playing"
 def note_e(channel):  
-	os.system('mpg321 note_e.mp3') 
+	soundChannelE.play(soundE) 
 	print "Note E playing"
 def note_f(channel):  
-	os.system('mpg321 note_f.mp3') 
+	soundChannelF.play(soundF) 
 	print "Note F playing"
 
 raw_input("Press Enter to start\n>")  

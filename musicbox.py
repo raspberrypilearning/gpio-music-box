@@ -1,8 +1,7 @@
 #!/usr/bin/env python2.7  
   
 import RPi.GPIO as GPIO 
-import time 
-import os
+import time
 import pygame.mixer
 
 pygame.mixer.init(44000, -16, 2, 500) 
@@ -22,22 +21,13 @@ GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 time_stamp = time.time()  
 
-
-#Point at sound files
+# Point at sound files
 soundA = pygame.mixer.Sound("note_a.wav") 
 soundB = pygame.mixer.Sound("note_b.wav")
 soundC = pygame.mixer.Sound("note_c.wav")
 soundD = pygame.mixer.Sound("note_d.wav") 
 soundE = pygame.mixer.Sound("note_e.wav")
 soundF = pygame.mixer.Sound("note_f.wav")
-
-# Assign channels
-soundChannelA = pygame.mixer.Channel(1) 
-soundChannelB = pygame.mixer.Channel(2)
-soundChannelC = pygame.mixer.Channel(3)
-soundChannelD = pygame.mixer.Channel(4) 
-soundChannelE = pygame.mixer.Channel(5)
-soundChannelF = pygame.mixer.Channel(6)
 
 # Loop all sounds
 soundA.play(loops=-1)

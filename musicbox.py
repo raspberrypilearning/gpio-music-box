@@ -61,25 +61,6 @@ def note_on_f(channel):
 	soundChannelF.play(soundF) 
 	print "Note F playing"
 
-def note_off_a(channel): 
-	soundA.set_volume(0.0)
-	print "Note A playing"
-def note_off_b(channel):
-	soundChannelB.play(soundB)  
-	print "Note B playing"
-def note_off_c(channel):  
-	soundChannelC.play(soundC)
-	print "Note C playing"
-def note_off_d(channel):  
-	soundChannelD.play(soundD) 
-	print "Note D playing"
-def note_off_e(channel):  
-	soundChannelE.play(soundE) 
-	print "Note E playing"
-def note_off_f(channel):  
-	soundChannelF.play(soundF) 
-	print "Note F playing"
-
 raw_input("Press Enter to start\n>")  
   
 # The GPIO.add_event_detect() line below set things up so that  
@@ -93,14 +74,7 @@ GPIO.add_event_detect(18, GPIO.RISING, callback=note_on_b, bouncetime=200)
 GPIO.add_event_detect(27, GPIO.RISING, callback=note_on_c, bouncetime=200)  
 GPIO.add_event_detect(22, GPIO.RISING, callback=note_on_d, bouncetime=200)  
 GPIO.add_event_detect(23, GPIO.RISING, callback=note_on_e, bouncetime=200)  
-GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)  
-
-GPIO.add_event_detect(17, GPIO.FALLING, callback=note_off_a, bouncetime=200)  
-GPIO.add_event_detect(18, GPIO.FALLING, callback=note_off_b, bouncetime=200)
-GPIO.add_event_detect(27, GPIO.FALLING, callback=note_off_c, bouncetime=200)  
-GPIO.add_event_detect(22, GPIO.FALLING, callback=note_off_d, bouncetime=200)  
-GPIO.add_event_detect(23, GPIO.FALLING, callback=note_off_e, bouncetime=200)  
-GPIO.add_event_detect(24, GPIO.FALLING, callback=note_off_f, bouncetime=200)  
+GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)   
   
 try:  
 	print "Waiting for notes or stop with pin 25"  

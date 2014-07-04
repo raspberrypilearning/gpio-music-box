@@ -4,10 +4,10 @@ import RPi.GPIO as GPIO
 import time 
 GPIO.setmode(GPIO.BCM)  
   
-# 14 to stop the script  
+# 25 to stop the script  
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) 
 
-# 3V3 (3.3V)  to 15, 17, 18, 22, 23, 24 
+# 3V3 (3.3V)  to 17, 18, 27, 22, 23, 24 
 # to play notes  
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  
 GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) 
@@ -43,7 +43,7 @@ raw_input("Press Enter to start\n>")
 # when a rising edge is detected, regardless of whatever   
 # else is happening in the program, the notes will be run  
 # It will happen even while the program is waiting for  
-# a raising edge on Pin 14.  
+# a raising edge on Pin 25.  
 
 GPIO.add_event_detect(17, GPIO.RISING, callback=note_a, bouncetime=200)  
 GPIO.add_event_detect(18, GPIO.RISING, callback=note_b, bouncetime=200)
@@ -54,9 +54,9 @@ GPIO.add_event_detect(24, GPIO.RISING, callback=note_f, bouncetime=200)
 
   
 try:  
-	print "Waiting for notes or stop with pin 14"  
+	print "Waiting for notes or stop with pin 25"  
 	GPIO.wait_for_edge(25, GPIO.RISING)
-	print "Pin 14 pressed - script end."  
+	print "Pin 25 pressed - script end."  
   
 except KeyboardInterrupt:  
 	GPIO.cleanup()       # clean up GPIO on CTRL+C exit  

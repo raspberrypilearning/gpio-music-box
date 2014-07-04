@@ -12,7 +12,7 @@ GPIO.setmode(GPIO.BCM)
 # 25 to stop the script  
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) 
 
-# 3V3 (3.3V)  to 17, 18, 27, 22, 23, 24 
+# 3V3 (3.3V) to 17, 18, 27, 22, 23, 24 
 # to play notes  
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  
 GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) 
@@ -23,6 +23,7 @@ GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 time_stamp = time.time()  
 
 
+#Point at sound files
 soundA = pygame.mixer.Sound("note_a.wav") 
 soundB = pygame.mixer.Sound("note_b.wav")
 soundC = pygame.mixer.Sound("note_c.wav")
@@ -30,6 +31,7 @@ soundD = pygame.mixer.Sound("note_d.wav")
 soundE = pygame.mixer.Sound("note_e.wav")
 soundF = pygame.mixer.Sound("note_f.wav")
 
+# Assign channels
 soundChannelA = pygame.mixer.Channel(1) 
 soundChannelB = pygame.mixer.Channel(2)
 soundChannelC = pygame.mixer.Channel(3)
@@ -37,26 +39,23 @@ soundChannelD = pygame.mixer.Channel(4)
 soundChannelE = pygame.mixer.Channel(5)
 soundChannelF = pygame.mixer.Channel(6)
 
-
+# Loop all sounds
 soundA.play(loops=-1)
-soundA.set_volume(0.0)
-
 soundB.play(loops=-1)
-soundB.set_volume(0.0)
-
 soundC.play(loops=-1)
-soundC.set_volume(0.0)
-
 soundD.play(loops=-1)
-soundD.set_volume(0.0)
-
 soundE.play(loops=-1)
-soundE.set_volume(0.0)
-
 soundF.play(loops=-1)
+
+# Mute all Sounds
+soundA.set_volume(0.0)
+soundB.set_volume(0.0)
+soundC.set_volume(0.0)
+soundD.set_volume(0.0)
+soundE.set_volume(0.0)
 soundF.set_volume(0.0)
 
-# Define the callback functions (notes)    
+# Define the callback functions: Turn Volume up to 100%    
 def note_on_a(channel): 
 	soundA.set_volume(1.0)
 	print "Note A playing"
@@ -76,6 +75,7 @@ def note_on_f(channel):
 	soundF.set_volume(1.0)
 	print "Note F playing"
 
+
 raw_input("Press Enter to start\n>")  
   
 # The GPIO.add_event_detect() line below set things up so that  
@@ -90,10 +90,6 @@ GPIO.add_event_detect(27, GPIO.RISING, callback=note_on_c, bouncetime=200)
 GPIO.add_event_detect(22, GPIO.RISING, callback=note_on_d, bouncetime=200)  
 GPIO.add_event_detect(23, GPIO.RISING, callback=note_on_e, bouncetime=200)  
 GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)   
-
-
-soundA.play(loops=-1)
-soundA.set_volume(0.0)
 
 try:  
 	print "Waiting for notes or stop with pin 25"  

@@ -2,6 +2,7 @@
   
 import RPi.GPIO as GPIO 
 import time 
+import os
 GPIO.setmode(GPIO.BCM)  
   
 # 25 to stop the script  

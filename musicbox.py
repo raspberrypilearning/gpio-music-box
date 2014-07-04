@@ -41,24 +41,39 @@ soundChannelF = pygame.mixer.Channel(6)
 soundA.play(loops=-1)
 soundA.set_volume(0.0)
 
+soundB.play(loops=-1)
+soundB.set_volume(0.0)
+
+soundC.play(loops=-1)
+soundC.set_volume(0.0)
+
+soundD.play(loops=-1)
+soundD.set_volume(0.0)
+
+soundE.play(loops=-1)
+soundE.set_volume(0.0)
+
+soundF.play(loops=-1)
+soundF.set_volume(0.0)
+
 # Define the callback functions (notes)    
 def note_on_a(channel): 
 	soundA.set_volume(1.0)
 	print "Note A playing"
 def note_on_b(channel):
-	soundChannelB.play(soundB)  
+	soundB.set_volume(1.0) 
 	print "Note B playing"
 def note_on_c(channel):  
-	soundChannelC.play(soundC)
+	soundC.set_volume(1.0)
 	print "Note C playing"
 def note_on_d(channel):  
-	soundChannelD.play(soundD) 
+	soundD.set_volume(1.0)
 	print "Note D playing"
 def note_on_e(channel):  
-	soundChannelE.play(soundE) 
+	soundE.set_volume(1.0)
 	print "Note E playing"
 def note_on_f(channel):  
-	soundChannelF.play(soundF) 
+	soundF.set_volume(1.0)
 	print "Note F playing"
 
 raw_input("Press Enter to start\n>")  
@@ -75,7 +90,11 @@ GPIO.add_event_detect(27, GPIO.RISING, callback=note_on_c, bouncetime=200)
 GPIO.add_event_detect(22, GPIO.RISING, callback=note_on_d, bouncetime=200)  
 GPIO.add_event_detect(23, GPIO.RISING, callback=note_on_e, bouncetime=200)  
 GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)   
-  
+
+
+soundA.play(loops=-1)
+soundA.set_volume(0.0)
+
 try:  
 	print "Waiting for notes or stop with pin 25"  
 	GPIO.wait_for_edge(25, GPIO.RISING)

@@ -5,6 +5,8 @@ import time
 import os
 import pygame.mixer
 
+pygame.mixer.init(44000, -16, 1, 1024) 
+
 GPIO.setmode(GPIO.BCM)  
   
 # 25 to stop the script  

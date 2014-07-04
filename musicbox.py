@@ -38,7 +38,7 @@ soundChannelE = pygame.mixer.Channel(5)
 soundChannelF = pygame.mixer.Channel(6)
 
 soundChannelA.set_volume(0.0)
-soundA.play(sound, loops=-1)
+soundA.play(loops=-1)
 
 # Define the callback functions (notes)    
 def note_on_a(channel): 

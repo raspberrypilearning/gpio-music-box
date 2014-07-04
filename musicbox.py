@@ -5,7 +5,7 @@ import time
 import os
 import pygame.mixer
 
-pygame.mixer.init(44000, -16, 6, 1024) 
+pygame.mixer.init(44000, -16, 2, 500) 
 
 GPIO.setmode(GPIO.BCM)  
   
@@ -37,25 +37,45 @@ soundChannelD = pygame.mixer.Channel(4)
 soundChannelE = pygame.mixer.Channel(5)
 soundChannelF = pygame.mixer.Channel(6)
 
-
+soundChannelA.set_volume(0.0)
+soundChannelA.play(Sound, loops=-1, maxtime=0, fade_ms=0): return None
 
 # Define the callback functions (notes)    
-def note_a(channel): 
-	soundChannelA.play(soundA)
+def note_on_a(channel): 
+	soundChannelA.set_volume(1.0)
 	print "Note A playing"
-def note_b(channel):
+def note_on_b(channel):
 	soundChannelB.play(soundB)  
 	print "Note B playing"
-def note_c(channel):  
+def note_on_c(channel):  
 	soundChannelC.play(soundC)
 	print "Note C playing"
-def note_d(channel):  
+def note_on_d(channel):  
 	soundChannelD.play(soundD) 
 	print "Note D playing"
-def note_e(channel):  
+def note_on_e(channel):  
 	soundChannelE.play(soundE) 
 	print "Note E playing"
-def note_f(channel):  
+def note_on_f(channel):  
+	soundChannelF.play(soundF) 
+	print "Note F playing"
+
+def note_off_a(channel): 
+	soundChannelA.set_volume(0.0)
+	print "Note A playing"
+def note_off_b(channel):
+	soundChannelB.play(soundB)  
+	print "Note B playing"
+def note_off_c(channel):  
+	soundChannelC.play(soundC)
+	print "Note C playing"
+def note_off_d(channel):  
+	soundChannelD.play(soundD) 
+	print "Note D playing"
+def note_off_e(channel):  
+	soundChannelE.play(soundE) 
+	print "Note E playing"
+def note_off_f(channel):  
 	soundChannelF.play(soundF) 
 	print "Note F playing"
 
@@ -67,13 +87,19 @@ raw_input("Press Enter to start\n>")
 # It will happen even while the program is waiting for  
 # a raising edge on Pin 25.  
 
-GPIO.add_event_detect(17, GPIO.RISING, callback=note_a, bouncetime=200)  
-GPIO.add_event_detect(18, GPIO.RISING, callback=note_b, bouncetime=200)
-GPIO.add_event_detect(27, GPIO.RISING, callback=note_c, bouncetime=200)  
-GPIO.add_event_detect(22, GPIO.RISING, callback=note_d, bouncetime=200)  
-GPIO.add_event_detect(23, GPIO.RISING, callback=note_e, bouncetime=200)  
-GPIO.add_event_detect(24, GPIO.RISING, callback=note_f, bouncetime=200)  
+GPIO.add_event_detect(17, GPIO.RISING, callback=note_on_a, bouncetime=200)  
+GPIO.add_event_detect(18, GPIO.RISING, callback=note_on_b, bouncetime=200)
+GPIO.add_event_detect(27, GPIO.RISING, callback=note_on_c, bouncetime=200)  
+GPIO.add_event_detect(22, GPIO.RISING, callback=note_on_d, bouncetime=200)  
+GPIO.add_event_detect(23, GPIO.RISING, callback=note_on_e, bouncetime=200)  
+GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)  
 
+GPIO.add_event_detect(17, GPIO.FALLING, callback=note_off_a, bouncetime=200)  
+GPIO.add_event_detect(18, GPIO.FALLING, callback=note_off_b, bouncetime=200)
+GPIO.add_event_detect(27, GPIO.FALLING, callback=note_off_c, bouncetime=200)  
+GPIO.add_event_detect(22, GPIO.FALLING, callback=note_off_d, bouncetime=200)  
+GPIO.add_event_detect(23, GPIO.FALLING, callback=note_off_e, bouncetime=200)  
+GPIO.add_event_detect(24, GPIO.FALLING, callback=note_off_f, bouncetime=200)  
   
 try:  
 	print "Waiting for notes or stop with pin 25"  

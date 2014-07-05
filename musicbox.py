@@ -58,7 +58,7 @@ SOUNDS = {
 def note_on(pin):
 	sound = SOUNDS[pin]
 	sound.set_volume(1.0)
-	print "Note %s" % pin
+	print "Pin %s pressed" % pin
 
 
 raw_input("Press Enter to start\n>")  

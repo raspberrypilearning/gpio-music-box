@@ -63,10 +63,7 @@ def note_on_e(channel):
 	print "Note E playing"
 def note_on_f(channel):  
 	soundF.set_volume(1.0)
-	print "Note F playing"
-
-
-raw_input("Press Enter to start\n>")  
+	print "Note F playing" 
   
 # The GPIO.add_event_detect() line below set things up so that  
 # when a rising edge is detected, regardless of whatever   
@@ -80,12 +77,8 @@ GPIO.add_event_detect(27, GPIO.RISING, callback=note_on_c, bouncetime=200)
 GPIO.add_event_detect(22, GPIO.RISING, callback=note_on_d, bouncetime=200)  
 GPIO.add_event_detect(23, GPIO.RISING, callback=note_on_e, bouncetime=200)  
 GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)   
+ 
+print "Pin 25 pressed - script end."
+GPIO.wait_for_edge(25, GPIO.RISING)
 
-try:  
-	print "Waiting for notes or stop with pin 25"  
-	GPIO.wait_for_edge(25, GPIO.RISING)
-	print "Pin 25 pressed - script end."  
-  
-except KeyboardInterrupt:  
-	GPIO.cleanup()       # clean up GPIO on CTRL+C exit  
-GPIO.cleanup()           # clean up GPIO on normal exit 
+GPIO.cleanup()

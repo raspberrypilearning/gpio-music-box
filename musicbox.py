@@ -33,13 +33,15 @@ def pin_sound_setup(pin):
 	sound = SOUND_PINS[pin]
 	sound.play(loops=-1)
 	sound.set_volume(0)
-	GPIO.add_event_detect(pin, GPIO.RISING, callback=note_on, bouncetime=200)
+	GPIO.add_event_detect(pin, GPIO.BOTH, callback=pin_change, bouncetime=0)
 
 # Define the callback function: Turn Volume up to 100% 
-def note_on(pin):
+def pin_change(pin):
 	sound = SOUND_PINS[pin]
-	sound.set_volume(1.0)
-	print "Note %s playing" % pin
+	volume = GPIO.input(pin)
+	sound.set_volume(volume)
+	state = "high" if volume else "low"
+	print "Pin %s is %s" % (pin, state)
 
 def main():
 	for pin in SOUND_PINS:

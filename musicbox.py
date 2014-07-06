@@ -45,20 +45,25 @@ soundD.set_volume(0.0)
 soundE.set_volume(0.0)
 soundF.set_volume(0.0)
 
-SOUNDS = {
-	17: soundA,
-	18: soundB,
-	27: soundC,
-	22: soundD,
-	23: soundE,
-	24: soundF
-}
-
 # Define the callback functions: Turn Volume up to 100%    
-def note_on(pin):
-	sound = SOUNDS[pin]
-	sound.set_volume(1.0)
-	print "Pin %s pressed" % pin
+def note_on_a(channel): 
+	soundA.set_volume(1.0)
+	print "Note A playing"
+def note_on_b(channel):
+	soundB.set_volume(1.0) 
+	print "Note B playing"
+def note_on_c(channel):  
+	soundC.set_volume(1.0)
+	print "Note C playing"
+def note_on_d(channel):  
+	soundD.set_volume(1.0)
+	print "Note D playing"
+def note_on_e(channel):  
+	soundE.set_volume(1.0)
+	print "Note E playing"
+def note_on_f(channel):  
+	soundF.set_volume(1.0)
+	print "Note F playing"
 
 
 raw_input("Press Enter to start\n>")  
@@ -69,12 +74,12 @@ raw_input("Press Enter to start\n>")
 # It will happen even while the program is waiting for  
 # a raising edge on Pin 25.  
 
-GPIO.add_event_detect(17, GPIO.RISING, callback=note_on, bouncetime=200)  
-GPIO.add_event_detect(18, GPIO.RISING, callback=note_on, bouncetime=200)
-GPIO.add_event_detect(27, GPIO.RISING, callback=note_on, bouncetime=200)  
-GPIO.add_event_detect(22, GPIO.RISING, callback=note_on, bouncetime=200)  
-GPIO.add_event_detect(23, GPIO.RISING, callback=note_on, bouncetime=200)  
-GPIO.add_event_detect(24, GPIO.RISING, callback=note_on, bouncetime=200)   
+GPIO.add_event_detect(17, GPIO.RISING, callback=note_on_a, bouncetime=200)  
+GPIO.add_event_detect(18, GPIO.RISING, callback=note_on_b, bouncetime=200)
+GPIO.add_event_detect(27, GPIO.RISING, callback=note_on_c, bouncetime=200)  
+GPIO.add_event_detect(22, GPIO.RISING, callback=note_on_d, bouncetime=200)  
+GPIO.add_event_detect(23, GPIO.RISING, callback=note_on_e, bouncetime=200)  
+GPIO.add_event_detect(24, GPIO.RISING, callback=note_on_f, bouncetime=200)   
 
 try:  
 	print "Waiting for notes or stop with pin 25"  

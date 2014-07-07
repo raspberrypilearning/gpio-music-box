@@ -10,8 +10,8 @@ The circuit:
 
 Created 28 June 2014 
 By Rachel Rayns 
-Modified day month year 
-By author's name 
+Modified 7 July 2014 
+By Ashley Brown 
 
 https://github.com/RZRZR/sci-cen-music-box 
 

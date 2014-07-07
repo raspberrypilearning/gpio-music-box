@@ -1,4 +1,4 @@
-Science Centre - Music Box
+Music Box
 =================
 
 #### New install of Raspian

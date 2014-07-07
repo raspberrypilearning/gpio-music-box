@@ -76,11 +76,11 @@ void receiveData(int byteCount){
          if (data == 18 ){
 
             if (state == 0){
-                digitalWrite(led1, HIGH); // set the LED on
+                digitalWrite(led2, HIGH); // set the LED on
                 state2 = 1;
             }
             else{
-                digitalWrite(led1, LOW); // set the LED off
+                digitalWrite(led2, LOW); // set the LED off
                 state2 = 0;
             }
          }
@@ -88,11 +88,11 @@ void receiveData(int byteCount){
          if (data == 27 ){
 
             if (state == 0){
-                digitalWrite(led1, HIGH); // set the LED on
+                digitalWrite(led3, HIGH); // set the LED on
                 state3 = 1;
             }
             else{
-                digitalWrite(led1, LOW); // set the LED off
+                digitalWrite(led3, LOW); // set the LED off
                 state3 = 0;
             }
          }
@@ -100,11 +100,11 @@ void receiveData(int byteCount){
          if (data == 22 ){
 
             if (state == 0){
-                digitalWrite(led1, HIGH); // set the LED on
+                digitalWrite(led4, HIGH); // set the LED on
                 state4 = 1;
             }
             else{
-                digitalWrite(led1, LOW); // set the LED off
+                digitalWrite(led4, LOW); // set the LED off
                 state4 = 0;
             }
          }
@@ -112,11 +112,11 @@ void receiveData(int byteCount){
          if (data == 23 ){
 
             if (state == 0){
-                digitalWrite(led1, HIGH); // set the LED on
+                digitalWrite(led5, HIGH); // set the LED on
                 state5 = 1;
             }
             else{
-                digitalWrite(led1, LOW); // set the LED off
+                digitalWrite(led5, LOW); // set the LED off
                 state5 = 0;
             }
          }
@@ -124,11 +124,11 @@ void receiveData(int byteCount){
          if (data == 24 ){
 
             if (state == 0){
-                digitalWrite(led1, HIGH); // set the LED on
+                digitalWrite(led6, HIGH); // set the LED on
                 state6 = 1;
             }
             else{
-                digitalWrite(led1, LOW); // set the LED off
+                digitalWrite(led6, LOW); // set the LED off
                 state6 = 0;
             }
          }

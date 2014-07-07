@@ -59,7 +59,7 @@ void receiveData(int byteCount){
         Serial.print("data received: ");
         Serial.println(data);
         
-        for (int i = 0; int < PiDataCount; i++) {
+        for (int i = 0; i < PiDataCount; i++) {
 
           if (data == PiData[i]){
               

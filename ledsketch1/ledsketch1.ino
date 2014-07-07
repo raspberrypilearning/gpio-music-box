@@ -10,8 +10,8 @@
 
 	Created 28 June 2014
 	By Rachel Rayns
-	Modified day month year
-	By author's name
+	Modified 7 July 2014
+	By @Lily_2point0
 
 	https://github.com/RZRZR/sci-cen-music-box
 

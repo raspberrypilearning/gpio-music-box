@@ -3,7 +3,7 @@
 import RPi.GPIO as GPIO
 import pygame.mixer
 
-#For Arduino LEDS
+# For Arduino LEDs
 import smbus
 import time
 bus = smbus.SMBus(1)
@@ -12,7 +12,6 @@ address = 0x04
 
 
 pygame.mixer.init(44000, -16, 2, 500)
-
 GPIO.setmode(GPIO.BCM)
 
 # 25 to stop the script
@@ -35,7 +34,8 @@ SOUND_PINS = {
     24: soundF
 }
 
-# Define the setup function: activate pin, loop sound indefinitely, mute, GPIO event detection
+# Define the setup function: activate pin, loop sound
+# indefinitely, mute, GPIO event detection
     GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
     sound = SOUND_PINS[pin]
     sound.play(loops=-1)

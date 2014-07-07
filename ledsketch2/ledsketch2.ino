@@ -11,7 +11,7 @@ The circuit:
 Created 28 June 2014 
 By Rachel Rayns 
 Modified 7 July 2014 
-By Ashley Brown 
+By Ashley Brown (@arctic_sunrise)
 
 https://github.com/RZRZR/sci-cen-music-box 
 

@@ -58,17 +58,22 @@ void receiveData(int byteCount){
         data = Wire.read();
         Serial.print("data received: ");
         Serial.println(data);
-
-            if (state(data) == 0){
-                digitalWrite(led(data), HIGH); // set the LED on
-                state(data) = 1;
-            }
-            else{
-                digitalWrite(led1(data), LOW); // set the LED off
-                state(data) = 0;
-            }
-
         
+        for (int i = 0; int < PiPinCount; i++) {
+
+          if (data == PiData[i]){
+              
+              if (state[i] == 0){
+                  digitalWrite(ledPins[i], HIGH); // set the LED on
+                  state[i] = 1;
+              }
+              else{
+                  digitalWrite(ledPins[i], LOW); // set the LED off
+                  state[i] = 0;
+              }
+           }
+         
+        }   
 
      }
 }

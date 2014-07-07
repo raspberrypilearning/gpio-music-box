@@ -1,3 +1,22 @@
+/*
+	Sci Cen Music Box
+
+	6 LEDs turn on and off in response to a pin number being 
+        sent over I2C from RasPi (17, 18, 27, 22, 23, 24)
+
+	The circuit:
+	* Raspberry Pi Master over I2C
+	* 6 LEDs
+
+	Created 28 June 2014
+	By Rachel Rayns
+	Modified day month year
+	By author's name
+
+	https://github.com/RZRZR/sci-cen-music-box
+
+*/
+
 #include <Wire.h>
 
 #define SLAVE_ADDRESS 0x04

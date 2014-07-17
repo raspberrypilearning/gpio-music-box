@@ -10,7 +10,7 @@ The circuit:
 
 Created 28 June 2014 
 By Rachel Rayns 
-Modified 7 July 2014 
+Modified 4 July 2014 
 By Ashley Brown (@arctic_sunrise)
 
 https://github.com/RZRZR/sci-cen-music-box 
@@ -29,7 +29,7 @@ int stateCount = 6;
 int PiData[] = { 17, 18, 27, 22, 23, 24 }; 
 int PiDataCount = 6; 
 
-int ledPins[] = { 2, 7, 6, 5, 4, 3 }; 
+int ledPins[] = { 8, 9, 10, 11, 12, 13 };  
 int ledPinsCount = 6; 
 
 

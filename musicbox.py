@@ -3,14 +3,6 @@
 import RPi.GPIO as GPIO
 import pygame.mixer
 
-# For Arduino LEDs
-import smbus
-import time
-bus = smbus.SMBus(1)
-# I2c Address:
-address = 0x04
-
-
 pygame.mixer.init(44000, -16, 2, 500)
 GPIO.setmode(GPIO.BCM)
 
@@ -47,22 +39,8 @@ def pin_change(pin):
     sound = SOUND_PINS[pin]
     volume = GPIO.input(pin)
     sound.set_volume(volume)
-    writeNumber(pin)
     state = "high" if volume else "low"
     print "Pin %s is %s" % (pin, state)
-    time.sleep(1)
-    number = readNumber()
-    print "Arduino: Hey RPI, I received a digit ", number
-
-def writeNumber(value):
-    bus.write_byte(address, value)
-    # bus.write_byte_data(address, 0, value)
-    return -1
-
-def readNumber():
-    number = bus.read_byte(address)
-    # number = bus.read_byte_data(address, 1)
-    return number
 
 def main():
     map(pin_change, SOUND_PINS)

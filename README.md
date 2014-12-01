@@ -12,6 +12,7 @@ As well as a Raspberry Pi with an SD card loaded with Raspbian, you'll also need
 - 3 (or more) x Male-to-female jumper leads (e.g. from [Pimoroni](http://shop.pimoroni.com/products/jumper-jerky))
 - 1 x Male-to-male jumper leads (e.g. from [Pimoroni](http://shop.pimoroni.com/products/jumper-jerky))
 - 2 (or more) x Tactile button (e.g. from [RS Components](http://uk.rs-online.com/web/p/tactile-switches/7182443/))
+- Headphones or a speaker
 
 ## Worksheet
 

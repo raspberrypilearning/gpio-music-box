@@ -262,7 +262,7 @@ For each extra button, all you need to do is:
         2: sound_a,
         3: sound_b,
         4: sound_c,
-        14: sound_c,
+        14: sound_d,
     }
     ```
 

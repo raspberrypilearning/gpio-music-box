@@ -6,7 +6,16 @@ Wire up a series of buttons that play particular sounds when pressed
 
 First we'll create a Python program, import the GPIO and PyGame libraries and play a test sound file.
 
-1. Boot your Pi and open LXTerminal from the Desktop.
+1. Boot your Pi and log in with:
+
+    ```
+    username: pi
+    password: raspberry
+    ```
+
+1. Boot to desktop with the command `startx`
+
+1. Open LXTerminal from the Desktop.
 
 1. Type the command `ls` and you should see the files and folders in your home directory.
 
@@ -14,7 +23,7 @@ First we'll create a Python program, import the GPIO and PyGame libraries and pl
 
 1. Enter the folder with `cd music-box`
 
-1. Type `ls` and you shound see a `sounds folder`
+1. Type `ls` and you shound see a `sounds` folder
 
 1. Type `ls sounds` and you should see the example sound files.
 

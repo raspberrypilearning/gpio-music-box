@@ -124,6 +124,8 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
     ![](images/gpio-connect-ground.png)
 
+    If you're using a mini breadboard without a designated ground rail, you'll have to use one of the rows as the ground rail. Connect a row to a ground pin and the other points in that row will be connected to ground.
+
 1. Place the button on the breadboard and connect one of its feet to the ground rail.
 
 1. Connect the button's other foot (on the same side) to GPIO pin 2 like so:

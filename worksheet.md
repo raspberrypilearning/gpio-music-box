@@ -94,6 +94,7 @@ Now we've configured the audio and tested playing sound in Python, we'll connect
 
 Firstly, observe the following GPIO diagram. You'll be using a single ground pin (marked `GND`) and several GPIO pins (marked `GPIO`)
 
+|        |        |
 |-------:|:-------|
 |    3V3 | 5V     |
 |  GPIO2 | 5V     |

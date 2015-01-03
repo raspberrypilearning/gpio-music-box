@@ -57,7 +57,7 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
     drum = pygame.mixer.Sound("samples/drum_tom_mid_hard.wav")
     
     while True:
-        sound.play()
+        drum.play()
     ```
 
     Here, we import the audio mixer module of the PyGame library and initialise it.

@@ -133,7 +133,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
 1. Connect the button's other foot (on the same side) to GPIO pin 2 like so:
 
-    ![](images/gpio-connect-button2.png)
+    ![](images/gpio-connect-button.png)
 
 ## Connect first button to sound file
 

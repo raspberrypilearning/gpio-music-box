@@ -92,30 +92,30 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
 
 Now we've configured the audio and tested playing sound in Python, we'll connect the GPIO button.
 
-Firstly, observe the following GPIO diagram. You'll be using a single ground pin (marked `GND`) and several GPIO pins (marked `GPIO`)
+Firstly, observe the following GPIO diagram. You'll be using a single ground pin (marked `GND`) and several GPIO pins (marked `GPIO`):
 
-|        |        |
-|-------:|:-------|
-|    3V3 | 5V     |
-|  GPIO2 | 5V     |
-|  GPIO3 | GND    |
-|  GPIO4 | GPIO14 |
-|    GND | GPIO15 |
-| GPIO17 | GPIO18 |
-| GPIO27 | GND    |
-| GPIO22 | GPIO23 |
-|    3V3 | GPIO24 |
-| GPIO10 | GND    |
-|  GPIO9 | GPIO25 |
-| GPIO11 | GPIO8  |
-|    GND | GPIO7  |
-|    DNC | DNC    |
-|  GPIO5 | GND    |
-|  GPIO6 | GPIO12 |
-| GPIO13 | GND    |
-| GPIO19 | GPIO16 |
-| GPIO26 | GPIO20 |
-|    GND | GPIO21 |
+|            |            |
+|-----------:|:-----------|
+|    3V3     | 5V         |
+|  **GPIO2** | 5V         |
+|  **GPIO3** | GND        |
+|  **GPIO4** | **GPIO14** |
+|        GND | **GPIO15** |
+| **GPIO17** | **GPIO18** |
+| **GPIO27** | GND        |
+| **GPIO22** | **GPIO23** |
+|        3V3 | **GPIO24** |
+| **GPIO10** | GND        |
+|  **GPIO9** | **GPIO25** |
+| **GPIO11** | **GPIO8**  |
+|        GND | **GPIO7**  |
+|        DNC | DNC        |
+|  **GPIO5** | GND        |
+|  **GPIO6** | **GPIO12** |
+| **GPIO13** | GND        |
+| **GPIO19** | **GPIO16** |
+| **GPIO26** | **GPIO20** |
+|        GND | **GPIO21** |
 
 Note that if you have an older Raspberry Pi model you'll only have 26 pins but they have the same layout, starting at the top row (`3V3` and `5V` and ending at `GND` and `GPIO7`).
     

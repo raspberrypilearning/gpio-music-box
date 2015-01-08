@@ -169,7 +169,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
 1. Create a GPIO event that will call the `play` function when the button is pressed:
 
     ```python
-    GPIO.add_event_detect(2, GPIO.FALLING, play, 1000)
+    GPIO.add_event_detect(2, GPIO.FALLING, play, 100)
     ```
 
     The arguments passed to the function are:
@@ -177,7 +177,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
     - the GPIO pin number (`2`)
     - the type of voltage change (`FALLING`)
     - the function to be used as the callback (`play`)
-    - the amount of time allowed between button presses (`1000` milliseconds)
+    - the amount of time allowed between button presses (`100` milliseconds)
 
 1. Add a line to print `ready` once it's all been set up, and add a `while True` loop to wait for a button press:
 
@@ -242,7 +242,7 @@ Now that we've added an event for the first button to trigger the drum sound, we
     ```python
     for pin in sound_pins:
         GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
-        GPIO.add_event_detect(pin, GPIO.FALLING, play, 1000)
+        GPIO.add_event_detect(pin, GPIO.FALLING, play, 100)
     ```
 
     Now the `play` function will be called when pins `2` or `3` are triggered (by their connected buttons being pressed). However, we need to amend the `play` function to make it play the right sound according to which button was pressed.

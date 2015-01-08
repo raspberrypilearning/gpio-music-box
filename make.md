@@ -1,0 +1,1 @@
+In this resource, you will make a music box with a Raspberry Pi and a breadboard using the GPIO pins. You will use Python to create a mapping between each button and a different sound to make a musical box.

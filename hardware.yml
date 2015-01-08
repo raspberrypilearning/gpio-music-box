@@ -1,0 +1,15 @@
+- name: 1 x Solderless breadboard
+  img: breadboard
+  url: http://shop.pimoroni.com/products/colourful-mini-breadboard
+- name: 3 (or more) x Male-to-female jumper leads
+  img: male-to-female-jumper
+  url: http://shop.pimoroni.com/products/jumper-jerky
+- name: 1 x Male-to-male jumper lead
+  img: male-to-female-jumper
+  url: http://shop.pimoroni.com/products/jumper-jerky
+- name: 2 (or more) x Tactile buttons
+  img: tactile-push-button
+  url: http://uk.rs-online.com/web/p/tactile-switches/7182443/
+- name: Headphones or a speaker
+  img: headphones-speaker
+  url: http://thepihut.com/products/mini-portable-speaker-for-the-raspberry-pi

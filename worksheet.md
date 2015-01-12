@@ -146,7 +146,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
     import RPi.GPIO as GPIO
 
     pygame.mixer.init()
-    GPIO.modmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
 
     GPIO.setup(2, GPIO.IN, GPIO.PUD_DOWN)

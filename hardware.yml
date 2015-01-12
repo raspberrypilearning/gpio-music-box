@@ -2,10 +2,10 @@
   img: breadboard
   url: http://shop.pimoroni.com/products/colourful-mini-breadboard
 - name: 3 (or more) x Male-to-female jumper leads
-  img: male-to-female-jumper
+  img: jumper-male-to-female
   url: http://shop.pimoroni.com/products/jumper-jerky
 - name: 1 x Male-to-male jumper lead
-  img: male-to-female-jumper
+  img: jumper-male-to-female
   url: http://shop.pimoroni.com/products/jumper-jerky
 - name: 2 (or more) x Tactile buttons
   img: tactile-push-button

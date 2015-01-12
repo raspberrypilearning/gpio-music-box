@@ -1,5 +1,7 @@
 # GPIO Music Box
 
+![](cover.png)
+
 Wire up a series of buttons that play particular sounds when pressed
 
 ## Requirements

@@ -192,7 +192,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
 
     If you do not see the word `playing` when you press the button, check you have it wired to the ground rail and pin 2, and that the cables are securely connected.
 
-## Add second button with a different sound
+## Add second button
 
 Now that we've added an event for the first button to trigger the drum sound, we'll connect a second button and map that to a different sound.
 

@@ -2,6 +2,7 @@ import pygame.mixer
 import RPi.GPIO as GPIO
 
 pygame.mixer.init()
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
@@ -22,12 +23,11 @@ def play(pin):
     print("playing note from pin %s" % pin)
     sound.play()
 
-def main():
-    for pin in sound_pins:
-        GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
-        GPIO.add_event_detect(pin, GPIO.FALLING, play, 100)
+for pin in sound_pins:
+    GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
+    GPIO.add_event_detect(pin, GPIO.FALLING, play, 100)
 
-    print("waiting for button press")
+print("ready")
 
-if __name__ == "__main__":
-    main()
+while True:
+    pass

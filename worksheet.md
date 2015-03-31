@@ -196,8 +196,10 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
     while True:
         pass
     ```
+    
+    This goes at the very end of the file.
 
-1. Run the program again and once you see `ready` printed to the screen, press the button and you should hear the drum sound played. Each time you press the button it should print `playing` to the screen and play the sound.
+1. Run the program again - and once you see `ready` printed to the screen, press the button and you should hear the drum sound played. Each time you press the button it should print `playing` to the screen and play the sound.
 
     If you do not see the word `playing` when you press the button, check you have it wired to the ground rail and pin 2, and that the cables are securely connected.
 

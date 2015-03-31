@@ -72,21 +72,23 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
     
 1. Click into the Python prompt window and press `Ctrl + C` on the keyboard to force it to end.
 
-    If you can't hear the sound, or it's coming out of the wrong speakers, you can change your audio configuration. Return to the terminal window and type the following command:
-
-    ```bash
-    amixer cset numid=3 2
-    ```
-
-    to switch audio to the headphone jack, or
+    **If you can't hear the sound, or it's coming out of the wrong speakers, you'll need to change your audio configuration.**
+    
+    Return to the terminal window and type the following command:
 
     ```bash
     amixer cset numid=3 1
     ```
 
-    to switch to HDMI.
+    to switch audio to the headphone jack, or
 
-    *You only need to do this if your audio is coming out of the wrong speakers.*
+    ```bash
+    amixer cset numid=3 2
+    ```
+
+    to switch to HDMI.
+    
+    Then try running your code again and you should hear the drum sound repeatedly. Click into the Python shell and press `Ctrl + C` to stop the program.
 
 ## Wire up first button
 

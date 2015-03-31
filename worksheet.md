@@ -48,7 +48,7 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
 
 1. Open the Python file in IDLE with the command `sudo idle musicbox.py &`.
 
-    This opens the Python application IDLE with superuser permissions, as you'll need these to use GPIO.
+    This opens the Python application IDLE with superuser permissions, as you'll need these to use GPIO. Don't forget the ampersand (`&`) on the end as this opens IDLE in a new process and lets you use the command line again.
 
     You'll see a Python prompt window. It will contain some information about Python then a new line starting with `>>>`. There will be another window, which will be blank.
 

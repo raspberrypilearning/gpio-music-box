@@ -35,9 +35,14 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
     cp -r /opt/sonic-pi/etc/samples/ .
     ```
 
-    This will copy the samples folder (`-r` means *recursively* which means all the files and folders inside the folder) to your `musicbox` folder.
-
-1. Type `ls samples` and you'll see a list of `.wav` audo files.
+    This will copy the samples folder to your `musicbox` folder.
+    
+    - `cp` is the *copy* command
+    - `-r` means *recursively* which means all the files and folders inside the `samples` folder
+    - `/opt/sonic-pi/etc/samples/` is where Sonic Pi keeps its sample sound files
+    - The dot (`.`) on the end of the command is the location we'd like to move the files to - and dot (`.`) means "here", which is our `musicbox` folder
+    
+1. Type `ls` and you'll see the samples folder has been copied over. Type `ls samples` and you'll see a list of `.wav` audo files inside that folder.
 
 1. Create a new Python file with `touch musicbox.py`.
 

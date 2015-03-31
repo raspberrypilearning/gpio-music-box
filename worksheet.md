@@ -163,7 +163,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
 
     This sets up GPIO pin 2 as an input, so you can trigger an event with the button.
 
-1. Now add a function for playing the sound. This will be the code than runs when the button is pressed:
+1. Now add a function for playing the sound. This will be the code than runs when the button is pressed. You'll need to add this after the `drum =` line:
 
     ```python
     def play(pin):
@@ -173,7 +173,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
 
     The `print` will tell you when the function has been called, so you know what's going on.
 
-1. Create a GPIO event that will call the `play` function when the button is pressed:
+1. Create a GPIO event that will run the `play` function when the button is pressed. Add the following line 
 
     ```python
     GPIO.add_event_detect(2, GPIO.FALLING, play, 100)
@@ -185,6 +185,8 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
     - the type of voltage change (`FALLING`)
     - the function to be used as the callback (`play`)
     - the amount of time allowed between button presses (`100` milliseconds)
+    
+    This uses an advanced feature called a *threaded callback* which means it will run the code in the function when it detects the button has been pressed. We set up the event on GPIO pin 2, which is what our button is connected to. The event/callback feature passes in the pin number to the function - but we're not using it for anything yet.
 
 1. Add a line to print `ready` once it's all been set up, and add a `while True` loop to wait for a button press:
 

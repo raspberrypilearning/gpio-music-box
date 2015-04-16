@@ -2,20 +2,11 @@
 
 Wire up a series of buttons that play particular sounds when pressed.
 
-## Getting started
+## Play a sample sound with Python
 
 First we'll create a Python program, import the GPIO and PyGame libraries, and play a sample sound file.
 
-1. Boot your Pi and log in with:
-
-    ```
-    username: pi
-    password: raspberry
-    ```
-
-1. Boot to the desktop with the command `startx`
-
-1. Open LXTerminal from the desktop.
+1. Open a Terminal window from the desktop or application menu.
 
 1. Type the command `ls` and you should see the files and folders in your home directory.
 
@@ -36,12 +27,12 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
     ```
 
     This will copy the samples folder to your `musicbox` folder.
-    
+
     - `cp` is the *copy* command
     - `-r` means *recursively* which means all the files and folders inside the `samples` folder
     - `/opt/sonic-pi/etc/samples/` is where Sonic Pi keeps its sample sound files
     - The dot (`.`) on the end of the command is the location we'd like to move the files to - and dot (`.`) means "here", which is our `musicbox` folder
-    
+
 1. Type `ls` and you'll see the samples folder has been copied over. Type `ls samples` and you'll see a list of `.wav` audo files inside that folder.
 
 1. Create a new Python file with `touch musicbox.py`.
@@ -60,7 +51,7 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
     pygame.mixer.init()
 
     drum = pygame.mixer.Sound("samples/drum_tom_mid_hard.wav")
-    
+
     while True:
         drum.play()
     ```
@@ -74,11 +65,11 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
 1. Save the file with `Ctrl + S` and run with `F5`.
 
     It should play the drum sound repeatedly.
-    
+
 1. Click into the Python prompt window and press `Ctrl + C` on the keyboard to force it to end.
 
     **If you can't hear the sound, or it's coming out of the wrong speakers, you'll need to change your audio configuration.**
-    
+
     Return to the terminal window and type the following command:
 
     ```bash
@@ -92,7 +83,7 @@ First we'll create a Python program, import the GPIO and PyGame libraries, and p
     ```
 
     to switch to HDMI.
-    
+
     Then try running your code again and you should hear the drum sound repeatedly. Click into the Python shell and press `Ctrl + C` to stop the program.
 
 ## Wire up first button
@@ -125,7 +116,7 @@ Firstly, observe the following GPIO diagram. You'll be using a single ground pin
 |        GND | **GPIO21** |
 
 Note that if you have an older Raspberry Pi model you'll only have 26 pins but they have the same layout, starting at the top row (`3V3` and `5V` and ending at `GND` and `GPIO7`).
-    
+
 1. Find a ground pin (marked `GND`) on the diagram of the Raspberry Pi's pin layout above.
 
 1. Attach a wire to a ground pin on the Raspberry Pi and connect it to the ground rail on your breadboard like so:
@@ -137,7 +128,7 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 1. Connect the button's other foot (on the same side) to GPIO pin 2 like so:
 
     ![](images/gpio-connect-button.png)
-    
+
     If you're using a mini breadboard without a designated ground rail, you'll have to use one of the rows as the ground rail. Connect a row to a ground pin and the other points in that row will be connected to ground like so:
 
     ![](images/gpio-connect-ground-mini.png)
@@ -173,19 +164,19 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
 
     The `print` will tell you when the function has been called, so you know what's going on.
 
-1. Create a GPIO event that will run the `play` function when the button is pressed. Add the following line 
+1. Create a GPIO event that will run the `play` function when the button is pressed. Add the following line
 
     ```python
     GPIO.add_event_detect(2, GPIO.FALLING, play, 100)
     ```
 
     The arguments passed to the function are:
-    
+
     - the GPIO pin number (`2`)
     - the type of voltage change (`FALLING`)
     - the function to be used as the callback (`play`)
     - the amount of time allowed between button presses (`100` milliseconds)
-    
+
     This uses an advanced feature called a *threaded callback* which means it will run the code in the function when it detects the button has been pressed. We set up the event on GPIO pin 2, which is what our button is connected to. The event/callback feature passes in the pin number to the function - but we're not using it for anything yet.
 
 1. Add a line to print `ready` once it's all been set up, and add a `while True` loop to wait for a button press:
@@ -196,7 +187,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
     while True:
         pass
     ```
-    
+
     This goes at the very end of the file.
 
 1. Run the program again - and once you see `ready` printed to the screen, press the button and you should hear the drum sound played. Each time you press the button it should print `playing` to the screen and play the sound.
@@ -245,7 +236,7 @@ Now that we've added an event for the first button to trigger the drum sound, we
     Looping over a dictionary like this yields the dictionary keys (the left hand side), and passing a key into a dictionary yields the corresponding value. For the pin setup all we need is the pin numbers.
 
     The other thing we want to do for each pin is set up the event detection.
-    
+
     We *could* write a new function to play each particular sound, and add each event detection separately mapped to the appropriate function. However, it is possible to use a single function that determines which sound to play according to which pin was triggered.
 
 1. Move the previously used `add_event_detect()` line into this loop, replacing the hard-coded value of `2` for the loop variable `pin`:

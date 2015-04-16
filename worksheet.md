@@ -129,10 +129,6 @@ Note that if you have an older Raspberry Pi model you'll only have 26 pins but t
 
     ![](images/gpio-connect-button.png)
 
-    If you're using a mini breadboard without a designated ground rail, you'll have to use one of the rows as the ground rail. Connect a row to a ground pin and the other points in that row will be connected to ground like so:
-
-    ![](images/gpio-connect-ground-mini.png)
-
 ## Connect first button to sound file
 
 Now we've connected a GPIO button, we'll make the sound play when the button is pressed.

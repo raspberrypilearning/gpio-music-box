@@ -1,5 +1,6 @@
 import pygame.mixer
 import RPi.GPIO as GPIO
+import signal
 
 pygame.mixer.init()
 
@@ -30,4 +31,5 @@ for pin in sound_pins:
 print("ready")
 
 while True:
+    signal.pause()
     pass

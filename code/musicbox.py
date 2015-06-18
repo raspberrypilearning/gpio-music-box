@@ -1,5 +1,5 @@
 import pygame.mixer
-import RPi.GPIO as GPIO
+from RPi import GPIO
 
 pygame.mixer.init()
 

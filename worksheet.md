@@ -137,7 +137,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
 
     ```python
     import pygame.mixer
-    import RPi.GPIO as GPIO
+    from RPi import GPIO
 
     pygame.mixer.init()
     GPIO.setmode(GPIO.BCM)

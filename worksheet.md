@@ -143,7 +143,7 @@ Now we've connected a GPIO button, we'll make the sound play when the button is 
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
 
-    GPIO.setup(2, GPIO.IN, GPIO.PUD_DOWN)
+    GPIO.setup(2, GPIO.IN, GPIO.PUD_UP)
 
     drum = pygame.mixer.Sound("samples/drum_tom_mid_hard.wav")
     ```
@@ -226,7 +226,7 @@ Now that we've added an event for the first button to trigger the drum sound, we
 
     ```python
     for pin in sound_pins:
-        GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
+        GPIO.setup(pin, GPIO.IN, GPIO.PUD_UP)
     ```
 
     Looping over a dictionary like this yields the dictionary keys (the left hand side), and passing a key into a dictionary yields the corresponding value. For the pin setup all we need is the pin numbers.
@@ -239,7 +239,7 @@ Now that we've added an event for the first button to trigger the drum sound, we
 
     ```python
     for pin in sound_pins:
-        GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
+        GPIO.setup(pin, GPIO.IN, GPIO.PUD_UP)
         GPIO.add_event_detect(pin, GPIO.FALLING, play, 100)
     ```
 

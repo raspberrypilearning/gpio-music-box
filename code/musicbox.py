@@ -24,7 +24,7 @@ def play(pin):
     sound.play()
 
 for pin in sound_pins:
-    GPIO.setup(pin, GPIO.IN, GPIO.PUD_DOWN)
+    GPIO.setup(pin, GPIO.IN, GPIO.PUD_UP)
     GPIO.add_event_detect(pin, GPIO.FALLING, play, 100)
 
 print("ready")

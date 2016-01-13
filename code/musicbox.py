@@ -1,33 +1,20 @@
 import pygame.mixer
-from RPi import GPIO
+from pygame.mixer import Sound
+from gpiozero import Button
+from signal import pause
 
 pygame.mixer.init()
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-
-drum = pygame.mixer.Sound("samples/drum_tom_mid_hard.wav")
-cymbal = pygame.mixer.Sound("samples/drum_cymbal_open.wav")
-bell = pygame.mixer.Sound("sounds/elec_bell.wav")
-snare = pygame.mixer.Sound("sounds/elec_hi_snare.wav")
-
 sound_pins = {
-    2: drum,
-    3: cymbal,
-    4: bell,
-    14: snare,
+    2: Sound("samples/drum_tom_mid_hard.wav"),
+    3: Sound("samples/drum_cymbal_open.wav"),
+    4: Sound("sounds/elec_bell.wav"),
+    14: Sound("sounds/elec_hi_snare.wav"),
 }
 
-def play(pin):
-    sound = sound_pins[pin]
-    print("playing note from pin %s" % pin)
-    sound.play()
+buttons = [Button(pin) for pin in sound_pins]
+for button in buttons:
+    sound = sound_pins[button.pin]
+    button.when_pressed = sound.play
 
-for pin in sound_pins:
-    GPIO.setup(pin, GPIO.IN, GPIO.PUD_UP)
-    GPIO.add_event_detect(pin, GPIO.FALLING, play, 100)
-
-print("ready")
-
-while True:
-    pass
+pause()

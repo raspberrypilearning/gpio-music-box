@@ -155,20 +155,10 @@ Now you've connected a GPIO button, you'll make the sound play when the button i
 
     *This sets up GPIO pin 2 as an input device with the capabilities of a button, so you can trigger an event with by pressing the button.*
 
-1. Now add a function for playing the sound. This will be the code than runs when the button is pressed. You'll need to add this after the `drum =` line:
+1. Now tell the button to run the sound's `play` function when it is pressed. Add the following line:
 
     ```python
-    def play(pin):
-        print("playing")
-        drum.play()
-    ```
-
-    The `print` will tell you when the function has been called, so you know what's going on.
-
-1. Now tell the button to run the `play` function when it is pressed. Add the following line
-
-    ```python
-    button.when_pressed = play
+    button.when_pressed = drum.play
     ```
 
 1. Add a line to pause the program so that it will continue to wait for the button to be pressed.
@@ -179,9 +169,9 @@ Now you've connected a GPIO button, you'll make the sound play when the button i
 
     This goes at the very end of the file.
 
-1. Run the program again, then press the button and you should hear the drum sound played. Each time you press the button it should print `playing` to the screen and play the sound.
+1. Run the program again, then press the button and you should hear the drum sound played. Each time you press the button it should play the sound.
 
-    *If you do not see the word `playing` when you press the button, check you have it wired to the ground rail and pin 2, and that the cables are securely connected.*
+    *If you do not hear the sound when you press the button, check you have it wired to the ground rail and pin 2, and that the cables are securely connected.*
 
 ## Add a second button
 

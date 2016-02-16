@@ -138,10 +138,11 @@ Now you've configured the audio and tested playing sound in Python, you'll conne
 
 Now you've connected a GPIO button, you'll make the sound play when the button is pressed.
 
-1. Return to the code window and add another line to the top section of imports:
+1. Return to the code window and add another two lines to the top section of imports:
 
     ```python
     from gpiozero import Button
+    from signal import pause
     ```
 
     *GPIO Zero provides an interface for many common GPIO components. The Button class contains everything you need to control anything with your push button.*
@@ -149,7 +150,6 @@ Now you've connected a GPIO button, you'll make the sound play when the button i
 1. Add a line beneath your mixer init to create an instance of your button on pin 2:
 
     ```python
-
     button = Button(2)
     ```
 

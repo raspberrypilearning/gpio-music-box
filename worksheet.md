@@ -210,7 +210,7 @@ Now that you've added an event for the first button to trigger the drum sound, y
 
     ```python
     for button in buttons:
-        sound = sound_pins[button.pin]
+        sound = sound_pins[button.pin.number]
         button.when_pressed = sound.play
     ```
 

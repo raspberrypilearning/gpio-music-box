@@ -234,8 +234,8 @@ For each extra button, all you need to do is:
     sound_pins = {
         2: Sound("samples/drum_tom_mid_hard.wav"),
         3: Sound("samples/drum_cymbal_open.wav"),
-        4: Sound("sounds/elec_bell.wav"),
-        14: Sound("sounds/elec_hi_snare.wav"),
+        4: Sound("samples/elec_bell.wav"),
+        14: Sound("samples/elec_hi_snare.wav"),
     }
     ```
 

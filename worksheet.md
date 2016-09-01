@@ -2,7 +2,7 @@
 
 Wire up a series of buttons that play particular sounds when pressed.
 
-## Play a sample sound with Python
+## Getting some sample sounds
 
 First you'll create a Python program, import the bits of the PyGame library you'll need, and play a sample sound file.
 
@@ -33,7 +33,27 @@ First you'll create a Python program, import the bits of the PyGame library you'
     - `/opt/sonic-pi/etc/samples/` is where Sonic Pi keeps its sample sound files
     - The dot (`.`) on the end of the command is the location you're going to move the files to; dot (`.`) means "here", which is the `musicbox` folder
 
-1. Type `ls` and you'll see the samples folder has been copied over. Type `ls samples` and you'll see a list of `.wav` audio files inside that folder.
+1. Type `ls` and you'll see the samples folder has been copied over. Type `ls samples` and you'll see a list of `.flac` audio files inside that folder.
+
+1. The `.flac` format is fine for Sonic Pi, but to use them in Python you'll need to convert them to `.wav` files. First you'll need to switch into the `samples` directory, by typing:
+
+    ``` bash
+    cd ~/musicbox/samples
+    ```
+
+1. Now you can use `avconv` to convert all the files. This line of bash converts the file from `.flac` to `.wav` and keeps the same base file name.
+
+    ``` bash
+    for f in *.flac; do avconv -i "$f" "${f%.flac}.wav"; done
+    ```
+
+1. Lastly, you can remove the `.flac` files from the **copy** of the `samples` directory
+
+    ``` bash
+    rm *.flac
+    ```
+
+## Playing sounds with Python
 
 1. Open Python 3 (IDLE) from the main menu:
 

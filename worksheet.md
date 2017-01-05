@@ -205,36 +205,21 @@ Now that you've added an event for the first button to trigger the drum sound, y
 
     Normally you'd use a list like `pins = [2, 3, 4, 5]` and use a loop to run the setup for each item in the list. However, as this time you also need a list of sounds that correspond to GPIO pins, you'll use another data structure called a *dictionary* which is used to store relationships between items.
 
-    Remove the `drum = ` line, and in its place, create a dictionary mapping the two GPIO pins to their respective sounds, like so:
+    Remove the `drum = ` line, and in its place, create a dictionary mapping the two GPIO buttons to their respective sounds, like so:
 
     ```python
-    sound_pins = {
-        2: Sound("samples/drum_tom_mid_hard.wav"),
-        3: Sound("samples/drum_cymbal_open.wav"),
+    button_sounds = {
+        Button(2): Sound("samples/drum_tom_mid_hard.wav"),
+        Button(3): Sound("samples/drum_cymbal_open.wav"),
     }
     ```
 
-    *This means you can look up which sound to play by passing in the pin number; for example `sound_pins[2]` yields the drum sound object, and `sound_pins[3]` yields the cymbal sound.*
-
-1. Now where you previously had the `button = Button(2)` line for pin 2, you'll use a technique called *list comprehension* to create a list of buttons on all the pin numbers in the `sound_pins` dictionary:
+1. Now you have a dictionary mapping buttons to sounds, you'll need to tell each button to play a sound when pressed. Rather than write a new function to play each particular sound, you can just loop over the dictionary and create `when_pressed` events for each button. below the creation of the dictionary, add the following loop:
 
     ```python
-    buttons = [Button(pin) for pin in sound_pins]
-    ```
-
-    Now `buttons` contains a list of `Button` objects, on pins 2 and 3.
-
-    *Looping over a dictionary like this yields the dictionary keys (the left hand side), and passing a key into a dictionary yields the corresponding value. For the pin setup all you need is the pin numbers.*
-
-1. Now you have a list of `Button` objects, you'll need to tell each button to play a sound when pressed. Rather than write a new function to play each particular sound, you can loop over the `buttons` list and look up each one in the dictionary. below the creation of the `buttons` list, add the following loop:
-
-    ```python
-    for button in buttons:
-        sound = sound_pins[button.pin.number]
+    for button, sound in button_sounds.items():
         button.when_pressed = sound.play
     ```
-
-    *Each Button object has a `pin` property which allows you to look up which GPIO pin it's connected to. Here you get the pin number from each button, look up which sound corresponds to the pin number and set it to `button.when_pressed`*
 
 1. You can now delete the `play` function as it is no longer used!
 
@@ -248,14 +233,14 @@ For each extra button, all you need to do is:
 
 1. Connect the button to the breadboard and wire it to the ground rail and another GPIO pin. **Make sure it's a pin marked GPIO in the pin diagram above.**
 
-1. Add the pin number and sound reference to the `sound_pins` dictionary:
+1. Add the button and sound reference to the `button_sounds` dictionary:
 
     ```python
-    sound_pins = {
-        2: Sound("samples/drum_tom_mid_hard.wav"),
-        3: Sound("samples/drum_cymbal_open.wav"),
-        4: Sound("samples/elec_bell.wav"),
-        14: Sound("samples/elec_hi_snare.wav"),
+    button_sounds = {
+        Button(2): Sound("samples/drum_tom_mid_hard.wav"),
+        Button(3): Sound("samples/drum_cymbal_open.wav"),
+        Button(4): Sound("samples/elec_bell.wav"),
+        Button(14): Sound("samples/elec_hi_snare.wav"),
     }
     ```
 

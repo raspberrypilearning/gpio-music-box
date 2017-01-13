@@ -214,14 +214,12 @@ Now that you've added an event for the first button to trigger the drum sound, y
     }
     ```
 
-1. Now you have a dictionary mapping buttons to sounds, you'll need to tell each button to play a sound when pressed. Rather than write a new function to play each particular sound, you can just loop over the dictionary and create `when_pressed` events for each button. below the creation of the dictionary, add the following loop:
+1. Now you have a dictionary mapping buttons to sounds, you'll need to tell each button to play the sound when pressed. You can loop over the dictionary and create `when_pressed` events for each button. Below the creation of the dictionary, add the following loop:
 
     ```python
     for button, sound in button_sounds.items():
         button.when_pressed = sound.play
     ```
-
-1. You can now delete the `play` function as it is no longer used!
 
 1. Now run the program again and try pressing each button. Each button should play its own sound.
 

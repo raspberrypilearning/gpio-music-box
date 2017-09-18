@@ -1,0 +1,22 @@
+title: GPIO music box
+hero_image: images/banner.png
+description: Make a device that plays music when you push its buttons
+original_url: https://www.raspberrypi.org/learning/gpio-music-box/
+theme: orange
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+interests: "music, sound, physical computing"
+technologies: "python, physical computing"
+steps:
+  - title: Introduction
+  - title: What you will need
+  - title: Setting up your project
+  - title: Converting your files
+  - title: Playing sounds
+  - title: Wiring buttons
+  - title: Playing sounds with buttons
+  - title: Improving the script
+  - title: "Challenge: a mobile disco"
+

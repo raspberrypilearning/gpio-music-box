@@ -6,7 +6,7 @@ For this project you will need:
 - a breadboard
 - four (4) tactile switches to make buttons
 - five (5) male-to-female jumper leads
-- four (4) male-to-make jumper leads
+- four (4) male-to-male jumper leads
 
 ### Software
 You will need:

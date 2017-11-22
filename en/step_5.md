@@ -20,12 +20,12 @@ Save your Python file in your `gpio-music-box` directory by clicking on 'File' a
 --- hints --- --- hint ---
 Your `.wav` files are all in your `samples` directory. So the file path will look like this:
 ```python
-"samples/drum_tom_mid_hard.wav"
+'samples/drum_tom_mid_hard.wav'
 ```
 --- /hint --- --- hint ---
 Each sound object will need to have a unique name. You could call the first one `drum`:
 ```python
-drum = pygame.mixer.Sound("samples/drum_tom_mid_hard.wav"
+drum = pygame.mixer.Sound('samples/drum_tom_mid_hard.wav')
 ```
 --- /hint --- --- hint ---
 Here's a video showing you the process

@@ -1,6 +1,6 @@
 ## Improving your script
 
-The code you have written should work without any problems. However, it's generally a good idea to make your code a little cleaner once you have a working prototype. The next steps are completely optional. If you're happy with your script, then just leave it as it is. If you want to make it a little cleaner, then try the following challenge.
+The code you have written should work without any problems. However, it's generally a good idea to make your code a little cleaner once you have a working prototype. The next steps are completely optional. If you're happy with your script, then just leave it as it is. If you want to make it a little cleaner, then try the following steps.
 
 - You can store your button objects and sounds in a dictionary, instead of having to create eight different objects.
 

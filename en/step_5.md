@@ -4,7 +4,7 @@
 
 [[[rpi-gui-idle-opening]]]
 
-- The first stage of creating the instruments of your music box is to get Python to play a few of the samples you have copied.
+- The first stage of creating the instruments of your music box is to test to see if Python can play a few of the samples you have copied.
 
 [[[generic-python-playing-sound-files]]]
 

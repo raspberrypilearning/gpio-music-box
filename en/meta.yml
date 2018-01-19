@@ -7,6 +7,7 @@ duration: 2
 listed: true
 ingredient: false
 copyedit: true
+curriculum: creator, design-0, programming-1, phys-comp-1, manufacture-0, community-0
 interests: "music, sound, physical computing"
 technologies: "python, physical computing"
 steps:

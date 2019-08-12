@@ -17,7 +17,7 @@ First set up one of your buttons, remembering to use the numbers for the pins **
 ---
 language: python
 filename: 
-line_numbers: 
+line_numbers: true
 line_number_start: 
 highlight_lines: 2, 11
 ---
@@ -59,9 +59,12 @@ btn_cymbal = Button(17)
 
 btn_cymbal.when_pressed = cymbal.play
 ```
---- /hint --- --- hint ---
-Here's what your full code should look like:
+--- /hint --- --- /hints ---
 
+--- collapse ---
+---
+title: Here's what your full code should look like:
+---
 ```python
 import pygame
 from gpiozero import Button
@@ -83,6 +86,6 @@ btn_cymbal.when_pressed = cymbal.play
 btn_snare.when_pressed = snare.play
 btn_bell.when_pressed = bell.play
 ```
---- /hint --- --- /hints ---
---- /task ---
+--- /collapse ---
+
 

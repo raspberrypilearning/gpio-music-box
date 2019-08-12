@@ -1,13 +1,13 @@
 ## Introduction
 
-In this project you will build a button controlled "music-box", playing different sounds when different buttons are pressed.
+In this project, you will build a button-controlled "music box" that plays different sounds when different buttons are pressed.
 
 ### What you will make
 
 --- no-print ---
 <video width="640" height="360" controls>
 <source src="images/gpio-music-box-final.webm" type="video/webm">
-Your browser does not support WebM video, try FireFox or Chrome
+Your browser does not support WebM video — try Firefox or Chrome.
 </video>
 --- /no-print---
 
@@ -31,12 +31,12 @@ title: What you will need
 ---
 
 ### Hardware
-- a Raspberry Pi computer
-- a breadboard
-- four (4) tactile switches to make buttons
-- five (5) male-to-female jumper leads
-- four (4) male-to-male jumper leads
-- Speakers or headphones.
+- A Raspberry Pi computer
+- A breadboard
+- Four (4) tactile switches (to make buttons)
+- Five (5) male-to-female jumper leads
+- Four (4) male-to-male jumper leads
+- Speakers or headphones
 
 ### Software
 - The latest version of the [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) operating system

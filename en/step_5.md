@@ -13,7 +13,26 @@ This is because you don't want the function to be called straight away, but rath
 --- task ---
 First set up one of your buttons, remembering to use the numbers for the pins **you** have used.
 
+--- code ---
+---
+language: python
+filename: 
+line_numbers: true
+line_number_start: 
+highlight_lines: 2, 11
+---
+import pygame
+from gpiozero import Button
 
+pygame.init()
+
+drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
+cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
+snare = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav")
+bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
+
+btn_drum = Button(4)
+--- /code ---
 --- /task ---
 
 --- task ---
@@ -42,6 +61,7 @@ btn_cymbal = Button(17)
 btn_cymbal.when_pressed = cymbal.play
 ```
 --- /hint --- --- /hints ---
+--- /task ---
 
 --- collapse ---
 ---

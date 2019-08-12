@@ -1,24 +1,36 @@
-## Playing sounds at the press of a button
+## Improving your script
 
-- Have a look at the section below to see how a function can be called using a button push.
+The code you have written should work without any problems. However, it's generally a good idea to make your code a little cleaner once you have a working prototype. The next steps are completely optional. If you're happy with your script, then just leave it as it is. If you want to make it a little cleaner, then try the following steps.
 
-[[[rpi-python-function-calls-with-buttons]]]
+- You can store your button objects and sounds in a dictionary, instead of having to create eight different objects.
 
-The function you want to call when the button is pressed is, for example, `drum.play()`. However, when using an event, such as a button push, to call a function, you don't use the brackets `()`. This is because you don't want the function to be called straight away, but rather be called only when the button is pushed. So in this case you just use `drum.play`.
+- Have a look at the steps below to learn about creating basic dictionaries and then looping over them.
 
-- Now see if you can make your buttons trigger different sounds. Test and run your code to make sure all four buttons make sounds play. If something's not working, then have a look at the hints below.
+[[[generic-python-basic-dictionaries]]]
+[[[generic-python-iterating-dictionaries]]]
+
+- Can you create a dictionary that contains your `Button()` objects as keys and your `Sound()` objects as values?
+
+[[[generic-python-functions-in-dictionaries]]]
+
+- If you have a dictionary of `Button()` and `Sound()` objects, you can now loop over them with a `for` loop, so that each button is tied to a different sound.
 
 --- hints --- --- hint ---
-Earlier, you set up functions using the `pygame` module and called them in the shell by typing, for example, `drum.play()`. These function calls can be used by the `when_pressed` method.
---- /hint --- --- hint ---
-To play the drum, you need a named button and the `drum` call. For example:
+Your dictionary should contain the button objects linked to the sounds to be played. For instance, your first key:value pair might look like this:
+
 ```python
-btn_drum.when_pressed = drum.play
+button_sounds = {Button(2): Sound("samples/drum_tom_mid_hard.wav")}
 ```
-This should play the drum sound each time the button is pressed.
+
 --- /hint --- --- hint ---
-Here's a video showing how all the sounds can be triggered by pressing buttons. The buttons are wired to pins 4, 17, 27 and 10.
+You can iterate over the dictionary to link each button to its sound.
+```python
+for button, sound in button_sounds.items():
+    button.when_pressed = sound.play
+```
+--- /hint --- --- hint ---
+Here's a video showing how the code can be written:
 <video width="560" height="315" controls>
-<source src="images/gpio-music-box-6.webm" type="video/webm">
+<source src="images/gpio-music-box-7.webm" type="video/webm">
 Try using Firefox or Chrome for WebM support
 --- /hint --- --- /hints ---

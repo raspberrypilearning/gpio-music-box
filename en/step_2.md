@@ -14,7 +14,7 @@ The first thing you need to do is create a new directory in which to store all y
 Using the same method as before, create a new directory called `samples` inside your `gpio-music-box` directory.
 --- /task ---
 
-There are lots of sample sounds stored in `/usr/share/sonic-pi/samples`. These all need to copied into `gpio-music-box/samples` directory.
+There are lots of sample sounds stored in `/usr/share/sonic-pi/samples`. These all need to be copied into `gpio-music-box/samples` directory.
 
 --- task ---
 Open a terminal window by clicking on the icon in the top left corner of your screen.

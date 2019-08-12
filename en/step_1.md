@@ -36,6 +36,7 @@ title: What you will need
 - four (4) tactile switches to make buttons
 - five (5) male-to-female jumper leads
 - four (4) male-to-male jumper leads
+- Speakers or headphones.
 
 ### Software
 - The latest version of the [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) operating system

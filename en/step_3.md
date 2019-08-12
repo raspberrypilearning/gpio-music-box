@@ -1,34 +1,82 @@
-## Converting your samples
+## Playing sounds
 
-- Python has difficulty playing `.flac` files, so you need to convert them all to `.wav` format.
+Now it's time to start writing your Python code. You can use any text editor or IDE to do this, but Mu is always an easy choice.
 
-- Have a look at the sections below to see how to convert audio files and how to batch-process files. See if you can convert all of your `.flac` samples in one batch using **bash**.
+![mu-opening](mu-starting.png)
 
-[[[nix-bash-convert-media-files]]]
+The first stage of creating the instruments of your music box is to test to see if Python can play a few of the samples you have copied.
 
-[[[nix-bash-batch-operations-on-files]]]
+[[[generic-python-playing-sound-files]]]
 
-- The basic idea is the following: `for` each file, use that file as input for the `avconv` command, and then use the file's name, ending in `.wav` instead of `.flac`, as the name of the output file.
+--- task ---
+First you will need to import and initialise the pygame module for playing sound files.
 
-- Have a look at the hints below if you need help figuring out how to do this.
+```python
+import pygame
+
+pygame.init()
+```
+--- /task ---
+
+--- task ---
+Save this file in you `gpio-music-box` directory.
+--- /task ---
+
+--- task ---
+Choose four sound files that you want to use for your project. Here we will be using:
+
+```
+drum_tom_mid_hard.wav
+drum_cymbal_hard.wav
+drum_snare_hard.wav
+drum_cowbell.wav
+```
+--- /task ---
+
+--- task ---
+You can then create a Python object that links to each of these sound files. Each should have it's own individual name. For instance:
+
+```python
+drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
+```
+--- /task ---
+
+--- task ---
+Create named onjects for your remaining three sounds.
 
 --- hints --- --- hint ---
-Your bash command should follow the following format:
-1. `for` each file with a `.flac` ending
-1. convert it using `avconv`
-1. name the output with the file's original, but change the `.flac` to `.wav`
---- /hint --- --- hint ---
-Your bash command should look like this:
-```bash
-for f in *.flac; do avconv -i "$f" "${f%.flac}.wav"; done
-```
-You need to make sure you are in the `samples` directory when you run the command. You can get to your `samples` directory with this command:
-```bash
-cd /home/pi/gpio-music-box/samples
+Your `.wav` files are all in your `samples` directory. So the file path will look like this:
+```python
+"/home/pi/gpio-music-box/samples/filename.wav"
 ```
 --- /hint --- --- hint ---
-Here's an animation showing how the operation can be achieved, along with the output:
-<video width="560" height="315" controls>
-<source src="images/gpio-music-box-3.webm" type="video/webm">
-Try using Firefox or Chrome for WebM support.
+Each sound object will need to have a unique name. You could call the next one `cymbal`:
+```python
+cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
+```
+--- /hint --- --- hint ---
+Here's what your code should look like:
+```python
+import pygame
+
+pygame.init()
+
+drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
+cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
+snare = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav")
+bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
+```
 --- /hint --- --- /hints ---
+--- /task ---
+
+--- task ---
+Save and run you code. Then in the shell at the bottom of the Mu editor, you can use `.play()` commands to play the sounds.
+
+```python3
+drum.play()
+```
+
+![playing-sounds](images/playing-sounds.png)
+--- /task ---
+
+If you don't hear the sound, check that your speakers or headphones are working and that your volume is turned up.

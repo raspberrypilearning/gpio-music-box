@@ -36,6 +36,7 @@ for button, sound in button_sounds.items():
 ---
 title: Your full code should now look like this:
 ---
+test
 ```python
 import pygame
 from gpiozero import Button

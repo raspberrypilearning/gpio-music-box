@@ -1,8 +1,8 @@
-## Improving your script
+## Improve your script
 
-The code you have written should work without any problems. However, it's generally a good idea to make your code a little cleaner once you have a working prototype.
+The code that you have written should work without any problems. However, it's generally a good idea to make your code a bit cleaner once you have a prototype that works.
 
-The next steps are completely optional. If you're happy with your script, then just leave it as it is. If you want to make it a little cleaner, then have a go.
+The next steps are completely optional. If you're happy with your script, then just leave it as it is. If you want to make your script a bit cleaner, then follow the steps on this page.
 
 You can store your button objects and sounds in a dictionary, instead of having to create eight different objects.
 
@@ -12,7 +12,7 @@ Have a look at the steps below to learn about creating basic dictionaries and th
 [[[generic-python-iterating-dictionaries]]]
 
 --- task ---
-Firstly you want to create a dictionary that uses the `Button`s as keys and the `Sound`s as values.
+First, create a dictionary that uses the `Button`s as keys and the `Sound`s as values.
 
 ```python3
 button_sounds = {Button(4): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav"),

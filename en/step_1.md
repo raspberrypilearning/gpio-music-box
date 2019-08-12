@@ -12,7 +12,7 @@ Your browser does not support WebM video, try FireFox or Chrome
 --- /no-print---
 
 --- print-only ---
-![final project(gpio-music-box-final.jpg)
+![final project](images/gpio-music-box-final.jpg)
 --- /print-only ---
 
 

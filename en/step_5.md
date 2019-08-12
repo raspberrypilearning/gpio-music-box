@@ -51,9 +51,9 @@ Run the program and press the button. If you don't hear the sound playing, then 
 Now, add code to make the remaining three buttons play their sounds.
 
 --- hints --- --- hint ---
-For example, you can add a `btn_cymbal`, and link it to the `cymbal.play()` function.
+For example, you could add a `btn_cymbal`, and link it to the `cymbal.play()` function.
 --- /hint --- --- hint ---
-Here's an example of the code you could use for a second button to work.
+Here's an example of the code that you could use for a second button.
 
 ```python
 btn_cymbal = Button(17)

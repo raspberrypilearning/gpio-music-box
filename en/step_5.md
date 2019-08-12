@@ -33,6 +33,7 @@ bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
 
 btn_drum = Button(4)
 --- /code ---
+--- /task ---
 
 --- task ---
 To play the sound when the button is pushed, just add this line of code to the bottom of your file:

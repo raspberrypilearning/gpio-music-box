@@ -11,7 +11,7 @@ First, in your `home` directory, create a directory called `gpio-music-box`. You
 ### Copy the sample sounds
 
 --- task ---
-Using the same method as before, create a new directory called `samples` in your `gpio-music-box` directory.
+Use the same method as before to create a new directory called `samples` in your `gpio-music-box` directory.
 --- /task ---
 
 There are lots of sample sounds stored in `/usr/share/sonic-pi/samples`. In the next step, you will copy these sounds into the `gpio-music-box/samples` directory.

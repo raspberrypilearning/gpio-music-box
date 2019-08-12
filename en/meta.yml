@@ -23,5 +23,5 @@ steps:
 - title: Playing sounds with buttons
 - title: Improving the script
 - title: "Challenge: a mobile disco"
-  challenge:true
+  challenge: true
 - title: "What next?"

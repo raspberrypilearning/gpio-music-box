@@ -18,10 +18,9 @@ Wire each button up to a different numbered GPIO pin. You can choose any pins yo
 --- hints --- --- hint ---
 You can wire a single **GND** pin to the negative *blue* rail on the breadboard. Then wire one leg of each button to this rail. The remaining legs of the buttons can be wired to individual GPIO pins.
 --- /hint --- --- hint ---
-
---- /hint --- --- hint ---
 Here's a wiring diagram that might help using pins `4`, `17`, `27` and `10`
 ![4-btn](images/4-btn.png)
+--- /hint --- --- hint ---
 Here's a video showing how the buttons can be wired.
 <video width="560" height="315" controls>
 <source src="images/gpio-music-box-5.webm" type="video/webm">

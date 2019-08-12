@@ -22,8 +22,6 @@ button_sounds = {Button(4): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/
 ```
 --- /task ---
 
-[[[generic-python-functions-in-dictionaries]]]
-
 --- task ---
 You can now loop over the dictionary to tell the program to play the sound when the button is pressed.
 ```python
@@ -36,7 +34,6 @@ for button, sound in button_sounds.items():
 ---
 title: Full code listing
 ---
-test
 ```python
 import pygame
 from gpiozero import Button

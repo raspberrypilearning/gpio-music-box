@@ -19,7 +19,7 @@ pygame.init()
 --- /task ---
 
 --- task ---
-Save this file in you `gpio-music-box` directory.
+Save this file in your `gpio-music-box` directory.
 --- /task ---
 
 --- task ---

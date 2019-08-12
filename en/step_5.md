@@ -1,17 +1,17 @@
-## Playing sounds at the press of a button
+## Play sounds at the press of a button
 
-You can have a look at the section below to see how a function can be called using a button push.
+To see how a function can be called using a button push, have a look at the section below.
 
 [[[rpi-python-function-calls-with-buttons]]]
 
-The function you want to call when the button is pressed is, for example, `drum.play()`.
+When the button is pushed, the program should call a function such as `drum.play()`.
 
-However, when using an event, such as a button push, to call a function, you don't use the brackets `()`.
+However, when you use an event (such as a button push) to call a function, you don't use brackets `()`.
 
-This is because you don't want the function to be called straight away, but rather be called only when the button is pushed. So in this case you just use `drum.play`.
+This is because the program must only call the function when the button is pushed, rather than straight away. So, in this case, you just use `drum.play`.
 
 --- task ---
-First set up one of your buttons, remembering to use the numbers for the pins **you** have used.
+First, set up one of your buttons. Remember to use the numbers for the GPIO pins that **you** have used, rather than the numbers in the example.
 
 --- code ---
 ---
@@ -48,12 +48,12 @@ Run the program and push the button. If you don't hear the sound playing, then c
 --- /task ---
 
 --- task ---
-Now add code to make the remaining three buttons play their sounds.
+Now, add code to make the remaining three buttons play their sounds.
 
 --- hints --- --- hint ---
-You can start by adding a `btn_cymbal` for instance, and linking it to the `cymbal.play()` function.
+For example, you can add a `btn_cymbal`, and link it to the `cymbal.play()` function.
 --- /hint --- --- hint ---
-Here's an example of getting a second button working
+Here's an example of the code you could use for a second button to work.
 
 ```python
 btn_cymbal = Button(17)

@@ -32,6 +32,9 @@ for button, sound in button_sounds.items():
 ```
 --- /task ---
 
+--- collapse ---
+---
+title: title
+---
 
-
-
+--- /collapse ---

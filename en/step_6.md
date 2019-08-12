@@ -1,24 +1,24 @@
-## Connecting your buttons
+## Playing sounds at the press of a button
 
-You're going to need four buttons, each wired to separate GPIO pins on the Raspberry Pi. Check out the steps below and then have a go at wiring up your buttons.
+- Have a look at the section below to see how a function can be called using a button push.
 
-[[[rpi-gpio-pins]]]
+[[[rpi-python-function-calls-with-buttons]]]
 
-[[[rpi-gpio-wiring-a-button]]]
+The function you want to call when the button is pressed is, for example, `drum.play()`. However, when using an event, such as a button push, to call a function, you don't use the brackets `()`. This is because you don't want the function to be called straight away, but rather be called only when the button is pushed. So in this case you just use `drum.play`.
 
-- Place your four buttons into your breadboard.
-- Wire each button up to a different GPIO pin.
+- Now see if you can make your buttons trigger different sounds. Test and run your code to make sure all four buttons make sounds play. If something's not working, then have a look at the hints below.
 
 --- hints --- --- hint ---
-You can wire a single **GND** pin to the negative *blue* rail on the breadboard. Then wire one leg of each button to this rail. The remaining legs of the buttons can be wired to individual GPIO pins.
+Earlier, you set up functions using the `pygame` module and called them in the shell by typing, for example, `drum.play()`. These function calls can be used by the `when_pressed` method.
 --- /hint --- --- hint ---
-Here's a wiring diagram that might help:
-![4-btn](images/4-btn.png)
+To play the drum, you need a named button and the `drum` call. For example:
+```python
+btn_drum.when_pressed = drum.play
+```
+This should play the drum sound each time the button is pressed.
 --- /hint --- --- hint ---
-Here's a video showing how the buttons can be wired.
+Here's a video showing how all the sounds can be triggered by pressing buttons. The buttons are wired to pins 4, 17, 27 and 10.
 <video width="560" height="315" controls>
-<source src="images/gpio-music-box-5.webm" type="video/webm">
+<source src="images/gpio-music-box-6.webm" type="video/webm">
 Try using Firefox or Chrome for WebM support
 --- /hint --- --- /hints ---
-
-

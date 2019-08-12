@@ -18,9 +18,10 @@ last_tested: 2019-08-12
 steps: 
 - title: Introduction
 - title: Setting up your project
-- title: Converting your files
 - title: Playing sounds
 - title: Wiring buttons
 - title: Playing sounds with buttons
 - title: Improving the script
 - title: "Challenge: a mobile disco"
+  challenge:true
+- title: "What next?"

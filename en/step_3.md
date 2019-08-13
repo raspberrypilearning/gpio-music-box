@@ -2,7 +2,7 @@
 
 Next, you will start to write your Python code. You can use any text editor or IDE to do this — Mu is always a good choice.
 
-![mu-opening](mu-starting.png)
+![mu-opening](images/mu-starting.png)
 
 To start to create the instruments of your music box, you need to test whether Python can play some of the samples that you have copied.
 

@@ -1,37 +1,91 @@
-## Playing sounds
+## Play sounds at the press of a button
 
-- Now it's time to start writing your Python code. You can use any text editor to do this, but IDLE is always an easy choice.
+To see how a function can be called using a button press, have a look at the section below.
 
-[[[rpi-gui-idle-opening]]]
+[[[rpi-python-function-calls-with-buttons]]]
 
-- The first stage of creating the instruments of your music box is to test to see if Python can play a few of the samples you have copied.
+When the button is pressed, the program should call a function such as `drum.play()`.
 
-[[[generic-python-playing-sound-files]]]
+However, when you use an event (such as a button press) to call a function, you don't use brackets `()`.
 
-### Creating your virtual instruments
+This is because the program must only call the function when the button is pressed, rather than straight away. So, in this case, you just use `drum.play`.
 
-- You're going to need four sounds to use in your GPIO music box.
-- To do this you can:
-  - import and initialise the `pygame` module
-  - create four different sound objects using four different `.wav` files
+--- task ---
+First, set up one of your buttons. Remember to use the numbers for the GPIO pins that **you** have used, rather than the numbers in the example.
 
-Save your Python file in your `gpio-music-box` directory by clicking on 'File' and 'Save'.
+--- code ---
+---
+language: python
+filename: 
+line_numbers: true
+line_number_start: 
+highlight_lines: 2, 11
+---
+import pygame
+from gpiozero import Button
+
+pygame.init()
+
+drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
+cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
+snare = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav")
+bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
+
+btn_drum = Button(4)
+--- /code ---
+--- /task ---
+
+--- task ---
+To play the sound when the button is pressed, just add this line of code to the bottom of your file:
+
+```python
+btn_drum.when_pressed = drum.play
+```
+--- /task ---
+
+--- task ---
+Run the program and press the button. If you don't hear the sound playing, then check the wiring of your button.
+--- /task ---
+
+--- task ---
+Now, add code to make the remaining three buttons play their sounds.
 
 --- hints --- --- hint ---
-Your `.wav` files are all in your `samples` directory. So the file path will look like this:
-```python
-'samples/drum_tom_mid_hard.wav'
-```
+For example, you could add a `btn_cymbal`, and link it to the `cymbal.play()` function.
 --- /hint --- --- hint ---
-Each sound object will need to have a unique name. You could call the first one `drum`:
-```python
-drum = pygame.mixer.Sound('samples/drum_tom_mid_hard.wav')
-```
---- /hint --- --- hint ---
-Here's a video showing you the process
-<video width="560" height="315" controls>
-<source src="images/gpio-music-box-4.webm" type="video/webm">
-Try using Firefox or Chrome for WebM support
-</video>
---- /hint --- --- /hints ---
+Here's an example of the code that you could use for a second button.
 
+```python
+btn_cymbal = Button(17)
+
+btn_cymbal.when_pressed = cymbal.play
+```
+--- /hint --- --- /hints ---
+--- /task ---
+
+--- collapse ---
+---
+title: Full code listing
+---
+```python
+import pygame
+from gpiozero import Button
+
+pygame.init()
+
+drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
+cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
+snare = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav")
+bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
+
+btn_drum = Button(4)
+btn_cymbal = Button(17)
+btn_snare= Button(27)
+btn_bell = Button(10)
+
+btn_drum.when_pressed = drum.play
+btn_cymbal.when_pressed = cymbal.play
+btn_snare.when_pressed = snare.play
+btn_bell.when_pressed = bell.play
+```
+--- /collapse ---

@@ -1,34 +1,31 @@
-## Converting your samples
+## Connect your buttons
 
-- Python has difficulty playing `.flac` files, so you need to convert them all to `.wav` format.
+You will need four buttons, each wired to separate GPIO pins on the Raspberry Pi.
 
-- Have a look at the sections below to see how to convert audio files and how to batch-process files. See if you can convert all of your `.flac` samples in one batch using **bash**.
+[[[rpi-gpio-pins]]]
 
-[[[nix-bash-convert-media-files]]]
+[[[rpi-gpio-wiring-a-button]]]
 
-[[[nix-bash-batch-operations-on-files]]]
+--- task ---
+Place the four buttons into your breadboard.
+--- /task ---
 
-- The basic idea is the following: `for` each file, use that file as input for the `avconv` command, and then use the file's name, ending in `.wav` instead of `.flac`, as the name of the output file.
+--- task ---
+Wire each button to a different numbered GPIO pin. You can choose any pins you like, but you will need to remember the numbers.
+--- /task ---
 
-- Have a look at the hints below if you need help figuring out how to do this.
 
 --- hints --- --- hint ---
-Your bash command should follow the following format:
-1. `for` each file with a `.flac` ending
-1. convert it using `avconv`
-1. name the output with the file's original, but change the `.flac` to `.wav`
+Wire a single **GND** pin to the negative **blue** rail on the breadboard. Then, wire one leg of each button to this rail. Finally, wire the remaining legs of the buttons to individual GPIO pins.
 --- /hint --- --- hint ---
-Your bash command should look like this:
-```bash
-for f in *.flac; do avconv -i "$f" "${f%.flac}.wav"; done
-```
-You need to make sure you are in the `samples` directory when you run the command. You can get to your `samples` directory with this command:
-```bash
-cd /home/pi/gpio-music-box/samples
-```
+Here's a wiring diagram that might help. In the example, the remaining legs of the buttons are wired to **GPIO 4**, **GPIO 17**, **GPIO 27** and **GPIO 10**.
+![4-btn](images/4-btn.png)
 --- /hint --- --- hint ---
-Here's an animation showing how the operation can be achieved, along with the output:
+Here's a video that shows how you can wire the buttons.
 <video width="560" height="315" controls>
-<source src="images/gpio-music-box-3.webm" type="video/webm">
-Try using Firefox or Chrome for WebM support.
+<source src="images/gpio-music-box-5.webm" type="video/webm">
+Try using Firefox or Chrome for WebM support
 --- /hint --- --- /hints ---
+
+
+

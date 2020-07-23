@@ -6,7 +6,7 @@ You have successfully completed the GPIO Music Box project, we would love it if 
 
 --- quiz ---
 ---
-question: Now that you've completed GPIO Music Box, how confident do you feel about coding in Scratch?
+question: Now that you've completed GPIO Music Box, how confident do you feel about coding using GPIO in Python?
 ---
 
 - ( ) Less confident

@@ -25,3 +25,5 @@ steps:
 - title: "Challenge: a mobile disco"
   challenge: true
 - title: "What next?"
+- title: Evaluation
+  quiz: true

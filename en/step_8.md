@@ -1,7 +1,18 @@
-## What next?
+## Reflection
 
-Try a few more physical computing projects:
+Congratulations on completing the GPIO Music Box project. We would love to know whether you think this project has helped you develop your digital making skills.
 
-- [Build a robot buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy)
-- [See like a bat](https://projects.raspberrypi.org/en/projects/see-like-a-bat)
-- [Whoopi cushion](https://projects.raspberrypi.org/en/projects/whoopi-cushion)
+--- no-print ---
+
+--- quiz ---
+---
+question: Now that you've completed Guide to My Country, how confident do you feel about coding in Python and using buttons?
+---
+
+- ( ) Less confident
+- ( ) About the same
+- ( ) More confident
+
+--- /quiz ---
+
+--- /no-print ---

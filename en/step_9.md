@@ -1,19 +1,7 @@
-## Project Evaluation
+## What next?
 
-You have successfully completed the GPIO Music Box project, we would love it if you could answer the following question about your experiences.
+Try a few more physical computing projects:
 
---- no-print ---
-
---- quiz ---
----
-question: Now that you've completed GPIO Music Box, how confident do you feel about coding using GPIO in Python?
----
-
-- ( ) Less confident
-- ( ) About the same
-- ( ) More confident
-
---- /quiz ---
-
---- /no-print ---
-
+- [Build a robot buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy)
+- [See like a bat](https://projects.raspberrypi.org/en/projects/see-like-a-bat)
+- [Whoopi cushion](https://projects.raspberrypi.org/en/projects/whoopi-cushion)

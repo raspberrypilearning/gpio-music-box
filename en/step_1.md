@@ -53,6 +53,6 @@ title: Additional information for educators
 
 If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/gpio-music-box/print){:target="_blank"}.
 
-You can [find the solution for this project here](http://rpf.io/p/en/gpio-music-box-get){:target="_blank"}.
+You can [find the solution for this project here](https://rpf.io/p/en/gpio-music-box-get){:target="_blank"}.
 --- /collapse ---
 

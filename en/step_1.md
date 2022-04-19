@@ -38,8 +38,8 @@ title: What you will need
 - A Raspberry Pi computer
 - A breadboard
 - Four (4) tactile switches (to make buttons)
-- Five (5) male-to-female jumper leads
-- Four (4) male-to-male jumper leads
+- Five (5) pin-to-socket jumper leads
+- Four (4) pin-to-pin jumper leads
 - Speakers or headphones
 
 ### Software

@@ -18,13 +18,15 @@ version: 4
 last_tested: 2019-08-12
 steps:
 - title: Introduction
-  completion: engaged
 - title: Set up your project
 - title: Play sounds
+  completion:
+  - engaged
 - title: Connect your buttons
 - title: Play sounds at the press of a button
-  completion: internal
 - title: Improve your script
+  completion:
+  - internal
 - title: 'Challenge: a mobile disco'
   challenge: true
 - title: Reflection

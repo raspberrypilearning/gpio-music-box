@@ -68,6 +68,8 @@ snare = pygame.mixer.Sound("drum_snare_hard.wav")
 bell = pygame.mixer.Sound("drum_cowbell.wav")
 ```
 
+--- /task ---
+
 --- task ---
 
 Save and run your code, and test some more sounds in the shell.

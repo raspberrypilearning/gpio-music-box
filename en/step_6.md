@@ -12,6 +12,7 @@ Have a look at the steps below to learn about creating basic dictionaries and th
 [[[generic-python-iterating-dictionaries]]]
 
 --- task ---
+
 First, create a dictionary that uses the `Button`s as keys and the `Sound`s as values.
 
 ```python3
@@ -20,14 +21,17 @@ button_sounds = {Button(4): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/
                  Button(27): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav"),
                  Button(10): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")}
 ```
+
 --- /task ---
 
 --- task ---
+
 You can now loop over the dictionary to tell the program to play the sound when the button is pressed:
 ```python
 for button, sound in button_sounds.items():
     button.when_pressed = sound.play
 ```
+
 --- /task ---
 
 --- collapse ---
@@ -40,10 +44,10 @@ from gpiozero import Button
 
 pygame.init()
 
-button_sounds = {Button(4): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav"),
-                 Button(17): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav"),
-                 Button(27): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav"),
-                 Button(10): pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")}
+button_sounds = {Button(4): pygame.mixer.Sound("drum_tom_mid_hard.wav"),
+                 Button(17): pygame.mixer.Sound("drum_cymbal_hard.wav"),
+                 Button(27): pygame.mixer.Sound("drum_snare_hard.wav"),
+                 Button(10): pygame.mixer.Sound("drum_cowbell.wav")}
 
 for button, sound in button_sounds.items():
     button.when_pressed = sound.play

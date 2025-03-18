@@ -27,8 +27,6 @@ steps:
 - title: Improve your script
   completion:
   - internal
-- title: 'Challenge: a mobile disco'
-  challenge: true
 - title: Reflection
   quiz: true
 - title: What next?

@@ -33,7 +33,7 @@ Move the downloaded `gpio-music-box-en-resources.zip` into your `gpio-music-box`
 
 --- task ---
 
-In you `gpio-music-box` folder, right click on the `.zip` file and select **Extract Here**.
+In your `gpio-music-box` folder, right click on the `.zip` file and select **Extract Here**.
 
 ![context menu with extract here selected](images/extract_here.png)
 

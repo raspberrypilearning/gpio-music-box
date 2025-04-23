@@ -1,4 +1,4 @@
-## Introduction
+## What you will make
 
 In this project, you will build a button-controlled "music box" that plays different sounds when different buttons are pressed. You can find a shortened version of this project on [YouTube](https://www.youtube.com/watch?v=2izvSzQWYak&feature=youtu.be)
 

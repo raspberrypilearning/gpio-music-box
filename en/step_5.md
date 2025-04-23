@@ -11,6 +11,7 @@ However, when you use an event (such as a button press) to call a function, you 
 This is because the program must only call the function when the button is pressed, rather than straight away. So, in this case, you just use `drum.play`.
 
 --- task ---
+
 First, set up one of your buttons. Remember to use the numbers for the GPIO pins that **you** have used, rather than the numbers in the example.
 
 --- code ---
@@ -26,16 +27,18 @@ from gpiozero import Button
 
 pygame.init()
 
-drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
-cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
-snare = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav")
-bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
+drum = pygame.mixer.Sound("drum_tom_mid_hard.wav")
+cymbal = pygame.mixer.Sound("drum_cymbal_hard.wav")
+snare = pygame.mixer.Sound("drum_snare_hard.wav")
+bell = pygame.mixer.Sound("drum_cowbell.wav")
 
 btn_drum = Button(4)
 --- /code ---
+
 --- /task ---
 
 --- task ---
+
 To play the sound when the button is pressed, just add this line of code to the bottom of your file:
 
 ```python
@@ -44,15 +47,21 @@ btn_drum.when_pressed = drum.play
 --- /task ---
 
 --- task ---
+
 Run the program and press the button. If you don't hear the sound playing, then check the wiring of your button.
+
 --- /task ---
 
 --- task ---
+
 Now, add code to make the remaining three buttons play their sounds.
 
 --- hints --- --- hint ---
+
 For example, you could add a `btn_cymbal`, and link it to the `cymbal.play()` function.
+
 --- /hint --- --- hint ---
+
 Here's an example of the code that you could use for a second button.
 
 ```python
@@ -60,7 +69,9 @@ btn_cymbal = Button(17)
 
 btn_cymbal.when_pressed = cymbal.play
 ```
+
 --- /hint --- --- /hints ---
+
 --- /task ---
 
 --- collapse ---
@@ -73,10 +84,10 @@ from gpiozero import Button
 
 pygame.init()
 
-drum = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_tom_mid_hard.wav")
-cymbal = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cymbal_hard.wav")
-snare = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_snare_hard.wav")
-bell = pygame.mixer.Sound("/home/pi/gpio-music-box/samples/drum_cowbell.wav")
+drum = pygame.mixer.Sound("drum_tom_mid_hard.wav")
+cymbal = pygame.mixer.Sound("drum_cymbal_hard.wav")
+snare = pygame.mixer.Sound("drum_snare_hard.wav")
+bell = pygame.mixer.Sound("drum_cowbell.wav")
 
 btn_drum = Button(4)
 btn_cymbal = Button(17)

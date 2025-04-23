@@ -1,18 +1,9 @@
-## Reflection
+## What can you do now?
 
-Congratulations on completing the GPIO Music Box project. We would love to know whether you think this project has helped you develop your digital making skills.
+Try our [Introduction to Raspberry Pi Pico](https://projects.raspberrypi.org/en/pathways/pico-intro) pathway, where you'll learn how to program more electronics using the Raspberry Pi Pico microcontroller to make cool gadgets!
 
---- no-print ---
+Or, try a few more physical computing projects in python:
 
---- quiz ---
----
-question: Now that you've completed GPIO Music Box, how confident do you feel about coding in Python and using buttons?
----
-
-- ( ) Less confident
-- ( ) About the same
-- ( ) More confident
-
---- /quiz ---
-
---- /no-print ---
+- [Build a robot buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy)
+- [See like a bat](https://projects.raspberrypi.org/en/projects/see-like-a-bat)
+- [Whoopi cushion](https://projects.raspberrypi.org/en/projects/whoopi-cushion)

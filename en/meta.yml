@@ -29,6 +29,5 @@ steps:
   - internal
 - title: Reflection
   quiz: true
-- title: What can you do now?
   completion:
   - external

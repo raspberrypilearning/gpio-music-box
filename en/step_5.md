@@ -56,11 +56,8 @@ Run the program and press the button. If you don't hear the sound playing, then 
 
 Now, add code to make the remaining three buttons play their sounds.
 
---- hints --- --- hint ---
-
-For example, you could add a `btn_cymbal`, and link it to the `cymbal.play()` function.
-
---- /hint --- --- hint ---
+--- hints ---
+--- hint ---
 
 Here's an example of the code that you could use for a second button.
 
@@ -70,7 +67,9 @@ btn_cymbal = Button(17)
 btn_cymbal.when_pressed = cymbal.play
 ```
 
---- /hint --- --- /hints ---
+--- /hint ---
+--- /hints ---
+
 
 --- /task ---
 
